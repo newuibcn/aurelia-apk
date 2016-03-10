@@ -2,6 +2,8 @@ module.exports = {
   "bundles": {
     "dist/app-build": {
       "excludes": [
+        "main.js",
+        "push-receiver.js"
       ],
       "includes": [
         "[*.js]",

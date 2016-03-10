@@ -195,12 +195,13 @@ System.config({
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.3.js",
       "app.js",
+      "blur-image.js",
       "child-router.html!github:systemjs/plugin-text@0.0.3.js",
       "child-router.js",
       "elements.html!github:systemjs/plugin-text@0.0.3.js",
-      "main.js",
       "nav-bar.html!github:systemjs/plugin-text@0.0.3.js",
       "users.html!github:systemjs/plugin-text@0.0.3.js",
+      "users.js",
       "welcome.html!github:systemjs/plugin-text@0.0.3.js",
       "welcome.js"
     ],

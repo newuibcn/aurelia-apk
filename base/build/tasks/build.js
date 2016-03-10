@@ -20,13 +20,13 @@ gulp.task('build-system', function() {
   if(!typescriptCompiler) {
     typescriptCompiler = typescript.create(require('../../tsconfig.json').compilerOptions);
   }
-  //return gulp.src(paths.dtsSrc.concat(paths.source))
-  return gulp.src(paths.source)
+  return gulp.src(paths.dtsSrc.concat(paths.source))
+  //return gulp.src(paths.sourcejs)
       .pipe(plumber())
     .pipe(changed(paths.output, {extension: '.js'}))
     .pipe(sourcemaps.init({loadMaps: true}))
-    //.pipe(typescriptCompiler())
-    .pipe(to5(assign({}, compilerOptions, {modules: 'system'})))
+    .pipe(typescriptCompiler())
+    //.pipe(to5(assign({}, compilerOptions, {modules: 'system'})))
     .pipe(sourcemaps.write({includeContent: true}))
     .pipe(gulp.dest(paths.output));
 });

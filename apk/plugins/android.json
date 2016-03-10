@@ -9,6 +9,10 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.avlio.aurelia"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "",
+            "PACKAGE_NAME": "com.avlio.aurelia"
         }
     },
     "dependent_plugins": {}

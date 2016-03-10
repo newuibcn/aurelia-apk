@@ -9,6 +9,8 @@ module.exports = {
     "jspm_packages/system-csp-production.js",
     "styles/styles.css",
     "dist/polymer.html",
+    "dist/push-receiver.js",
+    "dist/main.js",
     "jspm_packages/npm/font-awesome@4.5.0/css/font-awesome.min.css",
     "jspm_packages/npm/font-awesome@4.5.0/fonts/*",
     "jspm_packages/github/github/fetch@0.10.1.js",

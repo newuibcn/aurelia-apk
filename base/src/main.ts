@@ -1,5 +1,6 @@
 import 'bootstrap';
 import {Aurelia} from 'aurelia-framework';
+import {PushReceiver} from "push-receiver";
 
 export function configure(aurelia: Aurelia) {
   aurelia.use
@@ -13,4 +14,9 @@ export function configure(aurelia: Aurelia) {
   //aurelia.use.plugin('aurelia-html-import-template-loader')
 
   aurelia.start().then(() => aurelia.setRoot());
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    let pushReceiver = new PushReceiver();
+    pushReceiver.initialize();
+  }
 }
