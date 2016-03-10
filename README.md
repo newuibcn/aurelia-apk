@@ -12,7 +12,7 @@ Execute install.bat (Windows) or install.sh (Unix/OSX) to prepare the project.
 To run the cordova application you must have the latest [Cordova](https://cordova.apache.org) version. To install follow the steps in https://cordova.apache.org/docs/en/4.0.0/guide/cli/.
 
 ##Prepare environments
-Run `cordova create [directory-name] [apk-packageid] [apk-name]` to generate the skeleton of the application.
+Run (from root directory) `cordova create apk [apk-packageid] [apk-name]` to generate the skeleton of the application.
 Install required platforms with `cordova platform add XXX` in apk directory, where `XXX` corresponds to device os (android|ios|windows).
 
 ##Run/Emulate cordova application

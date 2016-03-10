@@ -2,116 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b527165-ef15-4747-bdd9-9829c2e8c63c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/npm/font-awesome@4.5.0/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/npm/font-awesome@4.5.0/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/npm/font-awesome@4.5.0/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/npm/font-awesome@4.5.0/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/npm/font-awesome@4.5.0/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/aurelia-apk.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/platforms/platforms.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/plugins/android.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/plugins/fetch.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/bower_components/hydrolysis/hydrolysis.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/bower_components/iron-test-helpers/mock-interactions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/bower_components/iron-test-helpers/test-helpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/bower_components/marked/lib/marked.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/bower_components/prism/prism.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/bower_components/prism/themes/prism.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/bower_components/promise-polyfill/Promise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/bower_components/web-animations-js/web-animations-next-lite.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/dist/app-build.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/dist/aurelia.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/dist/polymer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/github/github/fetch@0.10.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/github/github/fetch@0.10.1/fetch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/npm/font-awesome@4.5.0/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/npm/font-awesome@4.5.0/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/system-csp-production.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/system-polyfills.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/jspm_packages/system.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apk/www/styles/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/aurelia.protractor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/args.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/babel-options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/bundles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/export.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/paths.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/build.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/clean.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/cordova.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/dev.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/e2e.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/export-release.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/lint.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/prepare-release.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/serve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/build/tasks/watch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/custom_typings/aurelia-protractor.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/custom_typings/core-js/core-js.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/custom_typings/es6.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/doc/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/karma.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/protractor.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/app.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/app.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/blur-image.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/child-router.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/child-router.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/elements.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/main.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/nav-bar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/users.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/users.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/welcome.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/welcome.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/styles/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/test/e2e/src/demo.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/test/e2e/src/skeleton.po.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/test/e2e/src/welcome.po.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/test/unit/app.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/test/unit/child-router.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/test/unit/setup.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/test/unit/users.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/third-party/polymer/iron-scroll-target-behavior.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/third-party/polymer/iron-scroll-threshold.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/tsconfig.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/tslint.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings/browser.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings/browser/ambient/angular-protractor/angular-protractor.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings/browser/ambient/es6-promise/es6-promise.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings/browser/ambient/jasmine/jasmine.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings/browser/ambient/selenium-webdriver/selenium-webdriver.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings/main.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings/main/ambient/angular-protractor/angular-protractor.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings/main/ambient/es6-promise/es6-promise.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings/main/ambient/jasmine/jasmine.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/typings/main/ambient/selenium-webdriver/selenium-webdriver.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/wallaby.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/install.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="aurelia-apk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -132,22 +24,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apk/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1111112">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-              <folding />
-            </state>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/base/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11083744">
-              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-              <folding />
+          <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor vertical-scroll-proportion="0.59659094">
+                <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -188,9 +76,9 @@
         <option value="$PROJECT_DIR$/base/build/tasks/clean.js" />
         <option value="$PROJECT_DIR$/base/build/tasks/cordova.js" />
         <option value="$PROJECT_DIR$/base/src/app.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/apk/.gitignore" />
         <option value="$PROJECT_DIR$/base/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -477,6 +365,13 @@
       <option name="number" value="Default" />
       <updated>1457605658839</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1457624303724</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1457624303724</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -484,12 +379,13 @@
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2855831" sideWeight="0.5153509" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2855831" sideWeight="0.48464912" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2855831" sideWeight="0.48464912" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33039647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -513,6 +409,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -522,6 +423,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -540,6 +442,7 @@
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.0">
             <caret line="1" column="77" selection-start-line="1" selection-start-column="77" selection-end-line="1" selection-end-column="77" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -842,6 +745,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.060324825">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -867,16 +771,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.7519789">
-            <caret line="19" column="89" selection-start-line="19" selection-start-column="89" selection-end-line="19" selection-end-column="89" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/base/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.111386135">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -888,11 +787,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11083744">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.59659094">
+            <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
