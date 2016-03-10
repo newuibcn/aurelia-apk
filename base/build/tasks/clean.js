@@ -15,7 +15,9 @@ gulp.task('clean-no-bundled', function(){
     '!' + paths.output + '/aurelia.js',
     '!' + paths.output + '/app-build.js',
     '!' + paths.output + '/polymer.html',
-    '!' + paths.output + '/push-receiver.js',
+    '!' + paths.output + 'core',
+    '!' + paths.output + 'core/cordova',
+    '!' + paths.output + 'core/cordova/push-receiver.js',
     '!' + paths.output + '/main.js'
   ]);
 })

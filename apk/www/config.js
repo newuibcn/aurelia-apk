@@ -9,12 +9,17 @@ System.config({
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0-beta.1.1.2",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1.1.4",
+    "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0-beta.1.1.1",
+    "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.1.4",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0-beta.1.1.1",
     "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.1.4",
     "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0-beta.1.1.4",
     "aurelia-loader-default": "npm:aurelia-loader-default@1.0.0-beta.1.1.3",
+    "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1.1.2",
     "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0-beta.1.1.4",
+    "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.1.1",
     "aurelia-pal-browser": "npm:aurelia-pal-browser@1.0.0-beta.1.1.4",
+    "aurelia-path": "npm:aurelia-path@1.0.0-beta.1.1.1",
     "aurelia-polyfills": "npm:aurelia-polyfills@1.0.0-beta.1.0.0",
     "aurelia-router": "npm:aurelia-router@1.0.0-beta.1.1.2",
     "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0-beta.1.1.2",
@@ -192,19 +197,6 @@ System.config({
     }
   },
   bundles: {
-    "app-build.js": [
-      "app.html!github:systemjs/plugin-text@0.0.3.js",
-      "app.js",
-      "blur-image.js",
-      "child-router.html!github:systemjs/plugin-text@0.0.3.js",
-      "child-router.js",
-      "elements.html!github:systemjs/plugin-text@0.0.3.js",
-      "nav-bar.html!github:systemjs/plugin-text@0.0.3.js",
-      "users.html!github:systemjs/plugin-text@0.0.3.js",
-      "users.js",
-      "welcome.html!github:systemjs/plugin-text@0.0.3.js",
-      "welcome.js"
-    ],
     "aurelia.js": [
       "github:components/jquery@2.2.1.js",
       "github:components/jquery@2.2.1/jquery.js",
@@ -292,6 +284,37 @@ System.config({
       "npm:aurelia-templating-router@1.0.0-beta.1.1.2/router-view.js",
       "npm:aurelia-templating@1.0.0-beta.1.1.2.js",
       "npm:aurelia-templating@1.0.0-beta.1.1.2/aurelia-templating.js"
+    ],
+    "app-build.js": [
+      "app.html!github:systemjs/plugin-text@0.0.3.js",
+      "app.js",
+      "bootstrap-app/app.html!github:systemjs/plugin-text@0.0.3.js",
+      "bootstrap-app/app.js",
+      "bootstrap-app/blur-image.js",
+      "bootstrap-app/child-router.html!github:systemjs/plugin-text@0.0.3.js",
+      "bootstrap-app/child-router.js",
+      "bootstrap-app/nav-bar.html!github:systemjs/plugin-text@0.0.3.js",
+      "bootstrap-app/users.html!github:systemjs/plugin-text@0.0.3.js",
+      "bootstrap-app/users.js",
+      "bootstrap-app/welcome.html!github:systemjs/plugin-text@0.0.3.js",
+      "bootstrap-app/welcome.js",
+      "core/model/framework.js",
+      "elements.html!github:systemjs/plugin-text@0.0.3.js",
+      "events.js",
+      "framework-selector.html!github:systemjs/plugin-text@0.0.3.js",
+      "framework-selector.js",
+      "github:github/fetch@0.10.1.js",
+      "github:github/fetch@0.10.1/fetch.js",
+      "polymer-app/app.html!github:systemjs/plugin-text@0.0.3.js",
+      "polymer-app/app.js",
+      "polymer-app/blur-image.js",
+      "polymer-app/child-router.html!github:systemjs/plugin-text@0.0.3.js",
+      "polymer-app/child-router.js",
+      "polymer-app/nav-bar.html!github:systemjs/plugin-text@0.0.3.js",
+      "polymer-app/users.html!github:systemjs/plugin-text@0.0.3.js",
+      "polymer-app/users.js",
+      "polymer-app/welcome.html!github:systemjs/plugin-text@0.0.3.js",
+      "polymer-app/welcome.js"
     ]
   }
 });

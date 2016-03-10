@@ -3,12 +3,24 @@ module.exports = {
     "dist/app-build": {
       "excludes": [
         "main.js",
-        "push-receiver.js"
+        "core/cordova/push-receiver.js",
+        "aurelia-binding",
+        "aurelia-dependency-injection",
+        "aurelia-event-aggregator",
+        "aurelia-fetch-client",
+        "aurelia-framework",
+        "aurelia-loader",
+        "aurelia-logging",
+        "aurelia-metadata",
+        "aurelia-pal",
+        "aurelia-path",
+        "aurelia-task-queue",
+        "aurelia-templating"
       ],
       "includes": [
-        "[*.js]",
-        "*.html!text",
-        "*.css!text"
+        "**/*.js",
+        "**/*.html!text",
+        "**/*.css!text"
       ],
       "options": {
         "inject": true,

@@ -7,9 +7,9 @@ module.exports = {
     "jspm_packages/system.js",
     "jspm_packages/system-polyfills.js",
     "jspm_packages/system-csp-production.js",
-    "styles/styles.css",
+    "styles/*.css",
     "dist/polymer.html",
-    "dist/push-receiver.js",
+    "dist/core/cordova/push-receiver.js",
     "dist/main.js",
     "jspm_packages/npm/font-awesome@4.5.0/css/font-awesome.min.css",
     "jspm_packages/npm/font-awesome@4.5.0/fonts/*",
@@ -22,6 +22,7 @@ module.exports = {
     "bower_components/prism/prism.js",
     "bower_components/prism/themes/prism.css",
     "bower_components/promise-polyfill/Promise.js",
-    "bower_components/web-animations-js/web-animations-next-lite.min.js"
+    "bower_components/web-animations-js/web-animations-next-lite.min.js",
+    "bower_components/webcomponentsjs/webcomponents-lite.min.js"
   ]
 };

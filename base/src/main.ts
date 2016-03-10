@@ -1,6 +1,6 @@
 import 'bootstrap';
 import {Aurelia} from 'aurelia-framework';
-import {PushReceiver} from "push-receiver";
+import {PushReceiver} from "./core/cordova/push-receiver";
 
 export function configure(aurelia: Aurelia) {
   aurelia.use
