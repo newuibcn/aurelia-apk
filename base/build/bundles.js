@@ -4,6 +4,7 @@ module.exports = {
       "excludes": [
         "main.js",
         "core/cordova/push-receiver.js",
+        "core/cordova/auto-update.js",
         "aurelia-binding",
         "aurelia-dependency-injection",
         "aurelia-event-aggregator",
@@ -42,6 +43,7 @@ module.exports = {
         "aurelia-logging-console",
         "bootstrap",
         "bootstrap/css/bootstrap.css!text",
+        "fetch",
         "jquery"
       ],
       "options": {

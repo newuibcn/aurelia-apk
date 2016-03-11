@@ -18,18 +18,25 @@ var exec = require('gulp-exec');
 var typescriptCompiler = typescriptCompiler || null;
 gulp.task('build-system', function() {
   if(!typescriptCompiler) {
-    typescriptCompiler = typescript.create(require('../../tsconfig.json').compilerOptions);
+    typescriptCompiler = typescript.create(require('../../tsconfig-es5.json').compilerOptions);
   }
   return gulp.src(paths.dtsSrc.concat(paths.source))
-  //return gulp.src(paths.sourcejs)
       .pipe(plumber())
     .pipe(changed(paths.output, {extension: '.js'}))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(typescriptCompiler())
-    //.pipe(to5(assign({}, compilerOptions, {modules: 'system'})))
     .pipe(sourcemaps.write({includeContent: true}))
     .pipe(gulp.dest(paths.output));
 });
+/*gulp.task('build-system', function() {
+  return gulp.src(paths.sourcejs)
+      .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+      .pipe(changed(paths.output, {extension: '.js'}))
+      .pipe(sourcemaps.init({loadMaps: true}))
+      .pipe(to5(assign({}, compilerOptions, {modules: 'system'})))
+      .pipe(sourcemaps.write({includeContent: true}))
+      .pipe(gulp.dest(paths.output));
+});*/
 
 // copies changed html files to the output directory
 gulp.task('build-html', function() {
@@ -52,6 +59,7 @@ gulp.task('build-css', function() {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
+    'unbundle',
     ['build-system', 'build-html', 'build-css'],
     callback
   );

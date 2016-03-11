@@ -14,6 +14,6 @@ bower install
 
 echo "Importing third party libraries"
 cp third-party/polymer/*.html bower_components/iron-selector/
-
+cp third-party/system-register-only.js jspm_packages
 echo "Project installation completed!"
 cd ..

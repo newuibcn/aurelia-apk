@@ -18,6 +18,7 @@ gulp.task('clean-no-bundled', function(){
     '!' + paths.output + 'core',
     '!' + paths.output + 'core/cordova',
     '!' + paths.output + 'core/cordova/push-receiver.js',
+    '!' + paths.output + 'core/cordova/auto-update.js',
     '!' + paths.output + '/main.js'
   ]);
 })
