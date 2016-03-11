@@ -405,7 +405,7 @@ document.addEventListener('deviceready', () => {
                 })
                 .catch(() => {
                     console.log('Load local APK');
-                    //(<any>window).location = './mys.html';
+                    (<any>window).location = './mys.html';
                 })
         }, (e) => {
             console.log(e)

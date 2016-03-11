@@ -33,7 +33,7 @@
       "filename": "dist/core/cordova/push-receiver.js"
     },
     "index": {
-      "version": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "version": "aca792aa31ae958bd20a9a0630cd98d986e8d33b",
       "filename": "mys.html"
     },
     "system": {
@@ -82,5 +82,5 @@
     }
   },
   "load": [],
-  "version": "a0ebd6e8421ca7a3db2808baae5dc44ffd4f9a7a"
+  "version": "e71488ba96ca5a6627175f5694b525773874b755"
 }
