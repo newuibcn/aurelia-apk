@@ -6,15 +6,10 @@ var exec = require('child_process').exec;
 var runSequence = require('run-sequence');
 var paths = require('../paths');
 var prompt = require('gulp-prompt');
-var promptInput = {
-    username: "avizcaino-newuibcn",
-    password: "8SG.899,(+hc",
-    email: "avizcaino@newuibcn.com",
-    commitMessage: "First"
-}
+var promptInput;
 
 gulp.task('git-init', function(cb){
-    exec('cd export && git init && git remote rm origin && git remote add origin https://' + promptInput.username + ':' + promptInput.password + '@github.com/' + promptInput.username + '/test.git', function(err, stdout, stderr){
+    exec('cd export && git init && git remote add origin https://' + promptInput.username + ':' + promptInput.password + '@github.com/' + promptInput.username + '/test.git', function(err, stdout, stderr){
         console.log(stdout);
         console.log(stderr);
         cb(err);
@@ -59,14 +54,20 @@ gulp.task('git-config', function(cb){
 
 gulp.task('git-commit', function(cb){
     exec('cd export && git add * ' +
-        ' && git commit -m "' + promptInput.commitMessage +
-        '" && git push -u -f origin master', function(err, stdout, stderr){
+        ' && git commit -m "' + promptInput.commitMessage + '"', function(err, stdout, stderr){
         console.log(stdout);
         console.log(stderr);
         cb(err);
     });
 });
 
+gulp.task('git-push', function(cb){
+    exec('cd export && git push -u -f origin master', function(err, stdout, stderr){
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+})
 gulp.task('git-create-branches', function(cb){
     exec('cd export && git checkout -b test && git push origin test && git checkout -b release && git push origin release', function(err, stdout, stderr) {
         console.log(stdout);
@@ -75,20 +76,29 @@ gulp.task('git-create-branches', function(cb){
     });
 });
 
-gulp.task('git-merge', function(cb){
-    exec('cd export && git fetch && git pull origin master', function(err, stdout, stderr){
+gulp.task('git-fetch', function(cb){
+    exec('cd export && git fetch', function(err, stdout, stderr){
         console.log(stdout);
         console.log(stderr);
         cb(err);
     });
 });
 
-gulp.task('first-deploy'/*, ['git-fill-data']*/, function(callback){
+gulp.task('git-merge', function(cb){
+    exec('cd export && git add * && git commit -m "Merge"', function(err, stdout, stderr){
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+});
+
+gulp.task('first-deploy', ['git-fill-data'], function(callback){
     return runSequence(
         'export',
         'git-init',
         'git-config',
         'git-commit',
+        'git-push',
         'git-create-branches',
         callback
     )
@@ -99,8 +109,9 @@ gulp.task('deploy', ['git-fill-data'], function(callback){
         'export',
         'git-init',
         'git-config',
-        'git-merge',
         'git-commit',
+        'git-fetch',
+        'git-push',
         callback
-    )
+    );
 });
