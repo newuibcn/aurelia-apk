@@ -10,7 +10,7 @@ export class App {
   configureRouter(config: RouterConfiguration, router: Router) {
     config.title = 'Aurelia';
     config.map([
-      { route: ['', 'framework-selector'], name: 'framework-selector', moduleId: 'framework-selector', nav: true, title: 'Framework Selector' },
+      { route: ['', 'framework-selector'], name: 'framework-selector', moduleId: 'framework-selector', nav: true, title: 'Framework Selector New' },
       { route: 'bootstrap', name: 'bootstrap', moduleId: './bootstrap-app/app', nav: true, title: 'Bootstrap' },
       { route: 'polymer', name: 'polymer', moduleId: './polymer-app/app', nav: true, title: 'Polymer' }
       //{ route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users' },

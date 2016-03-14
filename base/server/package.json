@@ -1,0 +1,17 @@
+{
+  "name": "deploy-server",
+  "version": "1.0.0",
+  "description": "Deploy tasks to test/release Mobile Yourself",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Vizcaino <avizcaino@newuibcn.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-exec": "^2.1.2",
+    "gulp-prompt": "^0.1.2",
+    "require-dir": "^0.3.0"
+  }
+}

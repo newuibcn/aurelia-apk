@@ -20,3 +20,7 @@ Install required platforms with `cordova platform add XXX` in apk directory, whe
 - To run the application in a physical device, connect the device to your machine via USB and run `gulp cordova-run --platform: XXX`, where `XXX` corresponds to device os (android|ios|windows).
 - To emulate the application run `gulp cordova-emulate  --platform: XXX`, where `XXX` corresponds to device os (android|ios|windows).
 **Note:** To emulate the application you must have the proper emulator/virtual-machine configured.
+
+#Deploy application to server
+To deploy the project to remote server for the first time, run `gulp first-deploy`. This command will initialize git in `export`, commit the content and create remote branches `test` and `release`.
+To deploy future changes use `gulp deploy`
