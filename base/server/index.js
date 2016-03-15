@@ -76,7 +76,7 @@ gulp.task('test', function(cb){
 });
 
 gulp.task('release', function(cb){
-    exec('git checkout release && git reset --hard origin/test', function(err, stdout, stderr){
+    exec('git checkout release && git rebase test && git rebase --skip && git push -uf origin release', function(err, stdout, stderr){
         console.log(stdout);
         console.log(stderr);
         cb(err);
