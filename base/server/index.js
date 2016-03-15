@@ -4,7 +4,6 @@
 var gulp = require('gulp');
 var exec = require('child_process').exec;
 var prompt = require('gulp-prompt');
-var runSequence = require('run-sequence');
 var promptInput;
 
 gulp.task('fill-data', function(){
@@ -68,7 +67,8 @@ gulp.task('tag', ['prompt-tag'], function(cb){
 });
 
 gulp.task('test', function(cb){
-    exec('git checkout test && git rebase master && git rebase --skip && git push -uf origin test', function(err, stdout, stderr){
+    //exec('git checkout test && git rebase master && git rebase --skip && git push -uf origin test', function(err, stdout, stderr){
+    exec('git checkout test && git merge -s theirs master && git checkout master && git reset --soft test && git commit --amend', function(err,stdout,stderr){
         console.log(stdout);
         console.log(stderr);
         cb(err);
