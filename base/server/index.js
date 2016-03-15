@@ -66,17 +66,16 @@ gulp.task('tag', ['prompt-tag'], function(cb){
     });
 });
 
-gulp.task('test', function(cb){
-    //exec('git checkout test && git rebase master && git rebase --skip && git push -uf origin test', function(err, stdout, stderr){
-    exec('git checkout test && git merge -s theirs master && git checkout master && git reset --soft test && git commit --amend', function(err,stdout,stderr){
+gulp.task('test', ['fill-data'], function(cb){
+    exec('git push origin --delete test && git checkout -b test && git push origin test', function(err, stdout, stderr){
         console.log(stdout);
         console.log(stderr);
         cb(err);
     });
 });
 
-gulp.task('release', function(cb){
-    exec('git checkout release && git rebase test && git rebase --skip && git push -uf origin release', function(err, stdout, stderr){
+gulp.task('release', ['fill-data'], function(cb){
+    exec('git push origin --delete release && git checkout -b release && git push origin release', function(err, stdout, stderr){
         console.log(stdout);
         console.log(stderr);
         cb(err);
