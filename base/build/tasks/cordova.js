@@ -16,9 +16,10 @@ gulp.task('cordova-clean', function(){
 gulp.task('rename-index', function(){
     return gulp.src(paths.exportSrv + '*.html')
         .pipe(rename(function (path) {
+            console.log(path);
             if(path.basename == 'index')
                 path.basename = 'mys';
-            else if(path.basename == 'autoupdater')
+            else if(path.basename == 'run-autoupdater')
                 path.basename = 'index';
         }))
         .pipe(gulp.dest(paths.exportSrv));

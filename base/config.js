@@ -33,6 +33,7 @@ System.config({
     "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.1.1.2",
     "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.1.1.2",
     "babel": "npm:babel-core@5.8.35",
+    "babel-polyfill": "npm:babel-polyfill@6.7.2",
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "core-js": "npm:core-js@2.1.3",
@@ -177,6 +178,15 @@ System.config({
       "aurelia-path": "npm:aurelia-path@1.0.0-beta.1.1.1",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.1.1.1"
     },
+    "npm:babel-polyfill@6.7.2": {
+      "babel-regenerator-runtime": "npm:babel-regenerator-runtime@6.5.0",
+      "babel-runtime": "npm:babel-runtime@5.8.35",
+      "core-js": "npm:core-js@2.1.3",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:babel-regenerator-runtime@6.5.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:babel-runtime@5.8.35": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -204,38 +214,6 @@ System.config({
     }
   },
   bundles: {
-    "app-build.js": [
-      "app.html!github:systemjs/plugin-text@0.0.3.js",
-      "app.js",
-      "bootstrap-app/app.html!github:systemjs/plugin-text@0.0.3.js",
-      "bootstrap-app/app.js",
-      "bootstrap-app/blur-image.js",
-      "bootstrap-app/child-router.html!github:systemjs/plugin-text@0.0.3.js",
-      "bootstrap-app/child-router.js",
-      "bootstrap-app/nav-bar.html!github:systemjs/plugin-text@0.0.3.js",
-      "bootstrap-app/users.html!github:systemjs/plugin-text@0.0.3.js",
-      "bootstrap-app/users.js",
-      "bootstrap-app/welcome.html!github:systemjs/plugin-text@0.0.3.js",
-      "bootstrap-app/welcome.js",
-      "core/model/Framework.js",
-      "core/model/framework.js",
-      "elements.html!github:systemjs/plugin-text@0.0.3.js",
-      "events.js",
-      "framework-selector.html!github:systemjs/plugin-text@0.0.3.js",
-      "framework-selector.js",
-      "github:github/fetch@0.10.1.js",
-      "github:github/fetch@0.10.1/fetch.js",
-      "polymer-app/app.html!github:systemjs/plugin-text@0.0.3.js",
-      "polymer-app/app.js",
-      "polymer-app/blur-image.js",
-      "polymer-app/child-router.html!github:systemjs/plugin-text@0.0.3.js",
-      "polymer-app/child-router.js",
-      "polymer-app/nav-bar.html!github:systemjs/plugin-text@0.0.3.js",
-      "polymer-app/users.html!github:systemjs/plugin-text@0.0.3.js",
-      "polymer-app/users.js",
-      "polymer-app/welcome.html!github:systemjs/plugin-text@0.0.3.js",
-      "polymer-app/welcome.js"
-    ],
     "aurelia.js": [
       "github:components/jquery@2.2.1.js",
       "github:components/jquery@2.2.1/jquery.js",
@@ -325,6 +303,38 @@ System.config({
       "npm:aurelia-templating-router@1.0.0-beta.1.1.2/router-view.js",
       "npm:aurelia-templating@1.0.0-beta.1.1.2.js",
       "npm:aurelia-templating@1.0.0-beta.1.1.2/aurelia-templating.js"
+    ],
+    "app-build.js": [
+      "app.html!github:systemjs/plugin-text@0.0.3.js",
+      "app.js",
+      "bootstrap-app/app.html!github:systemjs/plugin-text@0.0.3.js",
+      "bootstrap-app/app.js",
+      "bootstrap-app/blur-image.js",
+      "bootstrap-app/child-router.html!github:systemjs/plugin-text@0.0.3.js",
+      "bootstrap-app/child-router.js",
+      "bootstrap-app/nav-bar.html!github:systemjs/plugin-text@0.0.3.js",
+      "bootstrap-app/users.html!github:systemjs/plugin-text@0.0.3.js",
+      "bootstrap-app/users.js",
+      "bootstrap-app/welcome.html!github:systemjs/plugin-text@0.0.3.js",
+      "bootstrap-app/welcome.js",
+      "core/model/Framework.js",
+      "core/model/framework.js",
+      "elements.html!github:systemjs/plugin-text@0.0.3.js",
+      "events.js",
+      "framework-selector.html!github:systemjs/plugin-text@0.0.3.js",
+      "framework-selector.js",
+      "github:github/fetch@0.10.1.js",
+      "github:github/fetch@0.10.1/fetch.js",
+      "polymer-app/app.html!github:systemjs/plugin-text@0.0.3.js",
+      "polymer-app/app.js",
+      "polymer-app/blur-image.js",
+      "polymer-app/child-router.html!github:systemjs/plugin-text@0.0.3.js",
+      "polymer-app/child-router.js",
+      "polymer-app/nav-bar.html!github:systemjs/plugin-text@0.0.3.js",
+      "polymer-app/users.html!github:systemjs/plugin-text@0.0.3.js",
+      "polymer-app/users.js",
+      "polymer-app/welcome.html!github:systemjs/plugin-text@0.0.3.js",
+      "polymer-app/welcome.js"
     ]
   }
 });

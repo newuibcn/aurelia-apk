@@ -16,7 +16,7 @@ var exec = require('gulp-exec');
 // by errors from other gulp plugins
 // https://www.npmjs.com/package/gulp-plumber
 var typescriptCompiler = typescriptCompiler || null;
-gulp.task('build-system', function() {
+/*gulp.task('build-system', function() {
   if(!typescriptCompiler) {
     typescriptCompiler = typescript.create(require('../../tsconfig-es5.json').compilerOptions);
   }
@@ -27,8 +27,8 @@ gulp.task('build-system', function() {
     .pipe(typescriptCompiler())
     .pipe(sourcemaps.write({includeContent: true}))
     .pipe(gulp.dest(paths.output));
-});
-/*gulp.task('build-system', function() {
+});*/
+gulp.task('build-system', function() {
   return gulp.src(paths.sourcejs)
       .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
       .pipe(changed(paths.output, {extension: '.js'}))
@@ -36,7 +36,7 @@ gulp.task('build-system', function() {
       .pipe(to5(assign({}, compilerOptions, {modules: 'system'})))
       .pipe(sourcemaps.write({includeContent: true}))
       .pipe(gulp.dest(paths.output));
-});*/
+});
 
 // copies changed html files to the output directory
 gulp.task('build-html', function() {

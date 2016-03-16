@@ -2,6 +2,7 @@
  * Created by alexvizcaino on 11/3/16.
  */
 import {IFileTransfer, IFileSystem, TrackedFile, Manifest, NetworkInformation, FileEntry, FileSystem, DirectoryEntry, Entry} from "auto-updater";
+import 'babel-polyfill';
 
 class Autoupdater{
     constructor(private _fileTransfer: IFileTransfer, private _fileSystem: IFileSystem, private _networkInformation: NetworkInformation,

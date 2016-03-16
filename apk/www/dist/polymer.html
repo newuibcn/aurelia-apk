@@ -12971,199 +12971,246 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   /**
    * @struct
    * @constructor
+   * @private
    */
   Polymer.IronOverlayManagerClass = function() {
+    /**
+     * Used to keep track of the opened overlays.
+     * @private {Array<Element>}
+     */
     this._overlays = [];
-    // Used to keep track of the last focused node before an overlay gets opened.
+
+    /**
+     * Used to keep track of the last focused node before an overlay gets opened.
+     * @private {Array<Element>}
+     */
     this._lastFocusedNodes = [];
 
     /**
-     * iframes have a default z-index of 100, so this default should be at least
-     * that.
+     * iframes have a default z-index of 100,
+     * so this default should be at least that.
      * @private {number}
      */
     this._minimumZ = 101;
 
+    /**
+     * Used to keep track of the opened overlays with backdrop.
+     * @private {Array<Element>}
+     */
     this._backdrops = [];
 
+    /**
+     * Memoized backdrop element.
+     * @private {Element|null}
+     */
     this._backdropElement = null;
-    Object.defineProperty(this, 'backdropElement', {
-      get: function() {
-        if (!this._backdropElement) {
-          this._backdropElement = document.createElement('iron-overlay-backdrop');
-        }
-        return this._backdropElement;
-      }.bind(this)
-    });
+  };
+
+  Polymer.IronOverlayManagerClass.prototype = {
+
+    constructor: Polymer.IronOverlayManagerClass,
+
+    /**
+     * The shared backdrop element.
+     * @type {Element} backdropElement
+     */
+    get backdropElement() {
+      if (!this._backdropElement) {
+        this._backdropElement = document.createElement('iron-overlay-backdrop');
+      }
+      return this._backdropElement;
+    },
 
     /**
      * The deepest active element.
-     * returns {?Node} element the active element
+     * @type {Element|undefined} activeElement the active element
      */
-    this.deepActiveElement = null;
-    Object.defineProperty(this, 'deepActiveElement', {
-      get: function() {
-        var active = document.activeElement;
-        // document.activeElement can be null
-        // https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement
-        while (active && active.root && Polymer.dom(active.root).activeElement) {
-          active = Polymer.dom(active.root).activeElement;
+    get deepActiveElement() {
+      var active = document.activeElement;
+      // document.activeElement can be null
+      // https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement
+      while (active && active.root && Polymer.dom(active.root).activeElement) {
+        active = Polymer.dom(active.root).activeElement;
+      }
+      return active;
+    },
+
+    /**
+     * If a node is contained in an overlay.
+     * @param {Element=} node
+     * @return {boolean}
+     * @private
+     */
+    _isChildOfOverlay: function(node) {
+      while (node && node !== document.body) {
+        // Use logical parentNode, or native ShadowRoot host.
+        node = Polymer.dom(node).parentNode || node.host;
+        // Check if it is an overlay.
+        if (node && node.behaviors && node.behaviors.indexOf(Polymer.IronOverlayBehaviorImpl) !== -1) {
+          return true;
         }
-        return active;
-      }.bind(this)
-    });
-  };
-
-  /**
-   * If a node is contained in an overlay.
-   * @private
-   * @param {Node} node
-   * @returns {Boolean}
-   */
-  Polymer.IronOverlayManagerClass.prototype._isChildOfOverlay = function(node) {
-    while (node && node !== document.body) {
-      // Use logical parentNode, or native ShadowRoot host.
-      node = Polymer.dom(node).parentNode || node.host;
-      // Check if it is an overlay.
-      if (node && node.behaviors && node.behaviors.indexOf(Polymer.IronOverlayBehaviorImpl) !== -1) {
-        return true;
       }
-    }
-    return false;
-  };
+      return false;
+    },
 
-  Polymer.IronOverlayManagerClass.prototype._applyOverlayZ = function(overlay, aboveZ) {
-    this._setZ(overlay, aboveZ + 2);
-  };
+    /**
+     * @param {Element} overlay
+     * @param {number} aboveZ
+     * @private
+     */
+    _applyOverlayZ: function(overlay, aboveZ) {
+      this._setZ(overlay, aboveZ + 2);
+    },
 
-  Polymer.IronOverlayManagerClass.prototype._setZ = function(element, z) {
-    element.style.zIndex = z;
-  };
+    /**
+     * @param {Element} element
+     * @param {number|string} z
+     * @private
+     */
+    _setZ: function(element, z) {
+      element.style.zIndex = z;
+    },
 
-  /**
-   * track overlays for z-index and focus managemant
-   */
-  Polymer.IronOverlayManagerClass.prototype.addOverlay = function(overlay) {
-    var minimumZ = Math.max(this.currentOverlayZ(), this._minimumZ);
-    this._overlays.push(overlay);
-    var newZ = this.currentOverlayZ();
-    if (newZ <= minimumZ) {
-      this._applyOverlayZ(overlay, minimumZ);
-    }
-    var element = this.deepActiveElement;
-    // If already in other overlay, don't reset focus there.
-    if (this._isChildOfOverlay(element)) {
-      element = null;
-    }
-    this._lastFocusedNodes.push(element);
-  };
-
-  Polymer.IronOverlayManagerClass.prototype.removeOverlay = function(overlay) {
-    var i = this._overlays.indexOf(overlay);
-    if (i >= 0) {
-      this._overlays.splice(i, 1);
-      this._setZ(overlay, '');
-
-      var node = this._lastFocusedNodes[i];
-      // Focus only if still contained in document.body
-      if (overlay.restoreFocusOnClose && node && Polymer.dom(document.body).deepContains(node)) {
-        node.focus();
+    /**
+     * Tracks overlays for z-index and focus management.
+     * @param {Element} overlay
+     */
+    addOverlay: function(overlay) {
+      var minimumZ = Math.max(this.currentOverlayZ(), this._minimumZ);
+      this._overlays.push(overlay);
+      var newZ = this.currentOverlayZ();
+      if (newZ <= minimumZ) {
+        this._applyOverlayZ(overlay, minimumZ);
       }
-      this._lastFocusedNodes.splice(i, 1);
-    }
-  };
-
-  Polymer.IronOverlayManagerClass.prototype.currentOverlay = function() {
-    var i = this._overlays.length - 1;
-    while (this._overlays[i] && !this._overlays[i].opened) {
-      --i;
-    }
-    return this._overlays[i];
-  };
-
-  Polymer.IronOverlayManagerClass.prototype.currentOverlayZ = function() {
-    return this._getOverlayZ(this.currentOverlay());
-  };
-
-  /**
-   * Ensures that the minimum z-index of new overlays is at least `minimumZ`.
-   * This does not effect the z-index of any existing overlays.
-   *
-   * @param {number} minimumZ
-   */
-  Polymer.IronOverlayManagerClass.prototype.ensureMinimumZ = function(minimumZ) {
-    this._minimumZ = Math.max(this._minimumZ, minimumZ);
-  };
-
-  Polymer.IronOverlayManagerClass.prototype.focusOverlay = function() {
-    var current = this.currentOverlay();
-    // We have to be careful to focus the next overlay _after_ any current
-    // transitions are complete (due to the state being toggled prior to the
-    // transition). Otherwise, we risk infinite recursion when a transitioning
-    // (closed) overlay becomes the current overlay.
-    //
-    // NOTE: We make the assumption that any overlay that completes a transition
-    // will call into focusOverlay to kick the process back off. Currently:
-    // transitionend -> _applyFocus -> focusOverlay.
-    if (current && !current.transitioning) {
-      current._applyFocus();
-    }
-  };
-
-  Polymer.IronOverlayManagerClass.prototype.trackBackdrop = function(element) {
-    // backdrops contains the overlays with a backdrop that are currently
-    // visible
-    var index = this._backdrops.indexOf(element);
-    if (element.opened && element.withBackdrop) {
-      // no duplicates
-      if (index === -1) {
-        this._backdrops.push(element);
+      var element = this.deepActiveElement;
+      // If already in other overlay, don't reset focus there.
+      if (this._isChildOfOverlay(element)) {
+        element = null;
       }
-    } else if (index >= 0) {
-      this._backdrops.splice(index, 1);
-    }
-  };
+      this._lastFocusedNodes.push(element);
+    },
 
-  Polymer.IronOverlayManagerClass.prototype.getBackdrops = function() {
-    return this._backdrops;
-  };
+    /**
+     * @param {Element} overlay
+     */
+    removeOverlay: function(overlay) {
+      var i = this._overlays.indexOf(overlay);
+      if (i >= 0) {
+        this._overlays.splice(i, 1);
+        this._setZ(overlay, '');
 
-  /**
-   * Returns the z-index for the backdrop.
-   */
-  Polymer.IronOverlayManagerClass.prototype.backdropZ = function() {
-    return this._getOverlayZ(this._overlayWithBackdrop()) - 1;
-  };
-
-  /**
-   * Returns the first opened overlay that has a backdrop.
-   */
-  Polymer.IronOverlayManagerClass.prototype._overlayWithBackdrop = function() {
-    for (var i = 0; i < this._overlays.length; i++) {
-      if (this._overlays[i].opened && this._overlays[i].withBackdrop) {
-        return this._overlays[i];
+        var node = this._lastFocusedNodes[i];
+        // Focus only if still contained in document.body
+        if (overlay.restoreFocusOnClose && node && Polymer.dom(document.body).deepContains(node)) {
+          node.focus();
+        }
+        this._lastFocusedNodes.splice(i, 1);
       }
-    }
-  };
+    },
 
-  /**
-   * Calculates the minimum z-index for the overlay.
-   */
-  Polymer.IronOverlayManagerClass.prototype._getOverlayZ = function(overlay) {
-    var z = this._minimumZ;
-    if (overlay) {
-      var z1 = Number(window.getComputedStyle(overlay).zIndex);
-      // Check if is a number
-      // Number.isNaN not supported in IE 10+
-      if (z1 === z1) {
-        z = z1;
+    /**
+     * @return {Element|undefined} overlay The current overlay.
+     */
+    currentOverlay: function() {
+      var i = this._overlays.length - 1;
+      while (this._overlays[i] && !this._overlays[i].opened) {
+        --i;
       }
+      return this._overlays[i];
+    },
+
+    /**
+     * @return {number} zIndex the current overlay z-index.
+     */
+    currentOverlayZ: function() {
+      return this._getOverlayZ(this.currentOverlay());
+    },
+
+    /**
+     * Ensures that the minimum z-index of new overlays is at least `minimumZ`.
+     * This does not effect the z-index of any existing overlays.
+     * @param {number} minimumZ
+     */
+    ensureMinimumZ: function(minimumZ) {
+      this._minimumZ = Math.max(this._minimumZ, minimumZ);
+    },
+
+    focusOverlay: function() {
+      var current = /** @type {?} */ (this.currentOverlay());
+      // We have to be careful to focus the next overlay _after_ any current
+      // transitions are complete (due to the state being toggled prior to the
+      // transition). Otherwise, we risk infinite recursion when a transitioning
+      // (closed) overlay becomes the current overlay.
+      //
+      // NOTE: We make the assumption that any overlay that completes a transition
+      // will call into focusOverlay to kick the process back off. Currently:
+      // transitionend -> _applyFocus -> focusOverlay.
+      if (current && !current.transitioning) {
+        current._applyFocus();
+      }
+    },
+
+    /**
+     * @param {Element} overlay The overlay that updated its withBackdrop.
+     */
+    trackBackdrop: function(overlay) {
+      var index = this._backdrops.indexOf(overlay);
+      if (overlay.opened && overlay.withBackdrop) {
+        // no duplicates
+        if (index === -1) {
+          this._backdrops.push(overlay);
+        }
+      } else if (index >= 0) {
+        this._backdrops.splice(index, 1);
+      }
+    },
+
+    /**
+     * @return {Array<Element>} backdrops
+     */
+    getBackdrops: function() {
+      return this._backdrops;
+    },
+
+    /**
+     * @return {number} index The z-index for the backdrop.
+     */
+    backdropZ: function() {
+      return this._getOverlayZ(this._overlayWithBackdrop()) - 1;
+    },
+
+    /**
+     * @return {Element|undefined} overlay The first opened overlay that has a backdrop.
+     * @private
+     */
+    _overlayWithBackdrop: function() {
+      for (var i = 0; i < this._overlays.length; i++) {
+        if (this._overlays[i].opened && this._overlays[i].withBackdrop) {
+          return this._overlays[i];
+        }
+      }
+    },
+
+    /**
+     * Calculates the minimum z-index for the overlay.
+     * @param {Element=} overlay
+     * @private
+     */
+    _getOverlayZ: function(overlay) {
+      var z = this._minimumZ;
+      if (overlay) {
+        var z1 = Number(window.getComputedStyle(overlay).zIndex);
+        // Check if is a number
+        // Number.isNaN not supported in IE 10+
+        if (z1 === z1) {
+          z = z1;
+        }
+      }
+      return z;
     }
-    return z;
   };
 
   Polymer.IronOverlayManager = new Polymer.IronOverlayManagerClass();
-
 </script>
 <!--
 @license
@@ -13441,6 +13488,11 @@ context. You should place this element as a child of `<body>` whenever possible.
         value: false
       },
 
+      /**
+       * Shortcut to access to the overlay manager.
+       * @private
+       * @type {Polymer.IronOverlayManagerClass}
+       */
       _manager: {
         type: Object,
         value: Polymer.IronOverlayManager
@@ -13481,7 +13533,7 @@ context. You should place this element as a child of `<body>` whenever possible.
 
     /**
      * The backdrop element.
-     * @type {Node}
+     * @type {Element}
      */
     get backdropElement() {
       return this._manager.backdropElement;
@@ -13502,7 +13554,7 @@ context. You should place this element as a child of `<body>` whenever possible.
      *
      * If you know what is your content (specifically the first and last focusable children),
      * you can override this method to return only `[firstFocusable, lastFocusable];`
-     * @type {[Node]}
+     * @type {Array<Node>}
      * @protected
      */
     get _focusableNodes() {
@@ -13600,7 +13652,7 @@ context. You should place this element as a child of `<body>` whenever possible.
 
     /**
      * Cancels the overlay.
-     * @param {?Event} event The original event
+     * @param {Event=} event The original event
      */
     cancel: function(event) {
       var cancelEvent = this.fire('iron-overlay-canceled', event, {cancelable: true});
@@ -14151,11 +14203,7 @@ Custom property | Description | Default
   <style>
 
     :host {
-      /* Needed for correct flex rendering on Firefox & Chrome Canary */
-      min-height: 0;
-      max-height: 100%;
-
-      @apply(--layout);
+      display: block;
       @apply(--layout-relative);
     }
 
@@ -14182,9 +14230,12 @@ Custom property | Description | Default
     .scrollable {
       padding: 0 24px;
 
-      @apply(--layout-flex);
       @apply(--layout-scroll);
       @apply(--paper-dialog-scrollable);
+    }
+
+    .fit {
+      @apply(--layout-fit);
     }
   </style>
 
@@ -14246,9 +14297,12 @@ Custom property | Description | Default
       // read parentNode on attached because if dynamically created,
       // parentNode will be null on creation.
       this.dialogElement = this.dialogElement || Polymer.dom(this).parentNode;
-      // Set itself to the overlay sizing target
-      if (this.dialogElement) {
+      // Check if parent implements paper-dialog-behavior. If not, fit scrollTarget to host.
+      if (this.dialogElement && this.dialogElement.behaviors &&
+          this.dialogElement.behaviors.indexOf(Polymer.PaperDialogBehaviorImpl) >= 0) {
         this.dialogElement.sizingTarget = this.scrollTarget;
+      } else if (this.dialogElement) {
+        this.scrollTarget.classList.add('fit');
       }
     }
 
@@ -15414,7 +15468,7 @@ Example:
     },
 
     observers: [
-      '_updateSelected(selectedValues)'
+      '_updateSelected(selectedValues.splices)'
     ],
 
     /**
@@ -16063,6 +16117,9 @@ Custom property | Description | Default
            * The CSS selector for the element that should receive focus when the drawer is open.
            * By default, when the drawer opens, it focuses the first tabbable element. That is,
            * the first element that can receive focus.
+           *
+           * To disable this behavior, you can set `drawerFocusSelector` to `null` or an empty string.
+           *
            */
           drawerFocusSelector: {
             type: String,
@@ -16359,28 +16416,32 @@ Custom property | Description | Default
 
         _getAutoFocusedNode: function() {
           var drawerContent = this._getDrawerContent();
-          return Polymer.dom(drawerContent).querySelector(this.drawerFocusSelector) || drawerContent;
+
+          return this.drawerFocusSelector ? 
+              Polymer.dom(drawerContent).querySelector(this.drawerFocusSelector) || drawerContent : null;
         },
 
         _toggleFocusListener: function(selected) {
           if (selected === 'drawer') {
-            document.addEventListener('focus', this._boundFocusListener, true);
+            this.addEventListener('focus', this._boundFocusListener, true);
           } else {
-            document.removeEventListener('focus', this._boundFocusListener, true);
+            this.removeEventListener('focus', this._boundFocusListener, true);
           }
         },
 
         _didFocus: function(event) {
+          var autoFocusedNode = this._getAutoFocusedNode();
+          if (!autoFocusedNode) {
+            return;
+          }
+
           var path = Polymer.dom(event).path;
           var focusedChild = path[0];
           var drawerContent = this._getDrawerContent();
-          var focusedChildCameFromDrawer = false;
-          var autoFocusedNode = this._getAutoFocusedNode();
+          var focusedChildCameFromDrawer = path.indexOf(drawerContent) !== -1;
 
-          while (!focusedChildCameFromDrawer && path[0]) {
-            focusedChildCameFromDrawer = path.shift() === drawerContent;
-          }
-          if (!focusedChildCameFromDrawer && autoFocusedNode) {
+          if (!focusedChildCameFromDrawer) {
+            event.stopPropagation();
             autoFocusedNode.focus();
           }
         },
@@ -17322,6 +17383,9 @@ For example:
       <input is="iron-input">
     </paper-input-container>
 
+Do not wrap <paper-input-contanter> around elements that already include it, such as <paper-input>.
+Doing so may cause events to bounce infintely between the container and its contained element.
+
 ### Listening for input changes
 
 By default, it listens for changes on the `bind-value` attribute on its children nodes and perform
@@ -17339,6 +17403,11 @@ compound input field like a social security number input. The custom input eleme
       <label>Social security number</label>
       <ssn-input class="paper-input-input"></ssn-input>
     </paper-input-container>
+
+
+If you're using a `<paper-input-container>` imperatively, it's important to make sure
+that you attach its children (the `iron-input` and the optional `label`) before you
+attach the `<paper-input-container>` itself, so that it can be set up correctly.
 
 ### Validation
 
@@ -17754,14 +17823,15 @@ This element is `display:block` by default, but you can set the `inline` attribu
       }
       this.addEventListener('focus', this._boundOnFocus, true);
       this.addEventListener('blur', this._boundOnBlur, true);
+    },
+
+    attached: function() {
       if (this.attrForValue) {
         this._inputElement.addEventListener(this._valueChangedEvent, this._boundValueChanged);
       } else {
         this.addEventListener('input', this._onInput);
       }
-    },
 
-    attached: function() {
       // Only validate when attached if the input already has a value.
       if (this._inputElementValue != '') {
         this._handleValueAndAutoValidate(this._inputElement);
@@ -18277,9 +18347,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       },
 
       _scrollInteractionHandler: function(event) {
+        var scrolledElement =
+            /** @type {HTMLElement} */(Polymer.dom(event).rootTarget);
         if (Polymer
               .IronDropdownScrollManager
-              .elementIsScrollLocked(Polymer.dom(event).rootTarget)) {
+              .elementIsScrollLocked(scrolledElement)) {
           if (event.type === 'keydown' &&
               !Polymer.IronDropdownScrollManager._isScrollingKeypress(event)) {
             return;
@@ -18465,8 +18537,7 @@ method is called on the element.
            * it is opened.
            */
           positionTarget: {
-            type: Object,
-            observer: '_positionTargetChanged'
+            type: Object
           },
 
           /**
@@ -18511,15 +18582,6 @@ method is called on the element.
           allowOutsideScroll: {
             type: Boolean,
             value: false
-          },
-
-          /**
-           * We memoize the positionTarget bounding rectangle so that we can
-           * limit the number of times it is queried per resize / relayout.
-           * @type {?Object}
-           */
-          _positionRectMemo: {
-            type: Object
           }
         },
 
@@ -18528,13 +18590,13 @@ method is called on the element.
         },
 
         observers: [
-          '_updateOverlayPosition(verticalAlign, horizontalAlign, verticalOffset, horizontalOffset)'
+          '_updateOverlayPosition(positionTarget, verticalAlign, horizontalAlign, verticalOffset, horizontalOffset)'
         ],
 
         attached: function() {
-          if (this.positionTarget === undefined) {
-            this.positionTarget = this._defaultPositionTarget;
-          }
+          this.positionTarget = this.positionTarget || this._defaultPositionTarget;
+          // Memoize this to avoid expensive calculations & relayouts.
+          this._isRTL = window.getComputedStyle(this).direction == 'rtl';
         },
 
         /**
@@ -18553,13 +18615,6 @@ method is called on the element.
         },
 
         /**
-         * Whether the text direction is RTL
-         */
-        _isRTL: function() {
-          return window.getComputedStyle(this).direction == 'rtl';
-        },
-
-        /**
          * The element that should be used to position the dropdown when
          * it opens, if no position target is configured.
          */
@@ -18574,31 +18629,32 @@ method is called on the element.
         },
 
         /**
-         * The bounding rect of the position target.
+         * The horizontal align value, accounting for the RTL/LTR text direction.
          */
-        get _positionRect() {
-          if (!this._positionRectMemo && this.positionTarget) {
-            this._positionRectMemo = this.positionTarget.getBoundingClientRect();
+        get _localeHorizontalAlign() {
+          // In RTL, "left" becomes "right".
+          if (this._isRTL) {
+            return this.horizontalAlign === 'right' ? 'left' : 'right';
+          } else {
+            return this.horizontalAlign;
           }
-
-          return this._positionRectMemo;
         },
 
         /**
          * The horizontal offset value used to position the dropdown.
+         * @param {ClientRect} dropdownRect
+         * @param {ClientRect} positionRect
+         * @param {boolean=false} fromRight
+         * @return {number} pixels
+         * @private
          */
-        get _horizontalAlignTargetValue() {
+        _horizontalAlignTargetValue: function(dropdownRect, positionRect, fromRight) {
           var target;
-
-          // In RTL, the direction flips, so what is "right" in LTR becomes "left".
-          var isRTL = this._isRTL();
-          if ((!isRTL && this.horizontalAlign === 'right') ||
-              (isRTL && this.horizontalAlign === 'left')) {
-            target = document.documentElement.clientWidth - this._positionRect.right;
+          if (fromRight) {
+            target = document.documentElement.clientWidth - positionRect.right - (this._fitWidth - dropdownRect.right);
           } else {
-            target = this._positionRect.left;
+            target = positionRect.left - dropdownRect.left;
           }
-
           target += this.horizontalOffset;
 
           return Math.max(target, 0);
@@ -18606,31 +18662,22 @@ method is called on the element.
 
         /**
          * The vertical offset value used to position the dropdown.
+         * @param {ClientRect} dropdownRect
+         * @param {ClientRect} positionRect
+         * @param {boolean=false} fromBottom
+         * @return {number} pixels
+         * @private
          */
-        get _verticalAlignTargetValue() {
+        _verticalAlignTargetValue: function(dropdownRect, positionRect, fromBottom) {
           var target;
-
-          if (this.verticalAlign === 'bottom') {
-            target = document.documentElement.clientHeight - this._positionRect.bottom;
+          if (fromBottom) {
+            target = document.documentElement.clientHeight - positionRect.bottom - (this._fitHeight - dropdownRect.bottom);
           } else {
-            target = this._positionRect.top;
+            target = positionRect.top - dropdownRect.top;
           }
-
           target += this.verticalOffset;
 
           return Math.max(target, 0);
-        },
-
-        /**
-         * The horizontal align value, accounting for the RTL/LTR text direction.
-         */
-        get _localeHorizontalAlign() {
-          // In RTL, "left" becomes "right".
-          if (this._isRTL()) {
-            return this.horizontalAlign === 'right' ? 'left' : 'right';
-          } else {
-            return this.horizontalAlign;
-          }
         },
 
         /**
@@ -18643,7 +18690,8 @@ method is called on the element.
             this.cancel();
           } else {
             this.cancelAnimation();
-            this._prepareDropdown();
+            this.sizingTarget = this.containedElement || this.sizingTarget;
+            this._updateAnimationConfig();
             Polymer.IronOverlayBehaviorImpl._openedChanged.apply(this, arguments);
           }
         },
@@ -18657,6 +18705,9 @@ method is called on the element.
           }
 
           if (!this.noAnimations && this.animationConfig && this.animationConfig.open) {
+            if (this.withBackdrop) {
+              this.backdropElement.open();
+            }
             this.$.contentWrapper.classList.add('animating');
             this.playAnimation('open');
           } else {
@@ -18670,6 +18721,9 @@ method is called on the element.
         _renderClosed: function() {
           Polymer.IronDropdownScrollManager.removeScrollLock(this);
           if (!this.noAnimations && this.animationConfig && this.animationConfig.close) {
+            if (this.withBackdrop) {
+              this.backdropElement.close();
+            }
             this.$.contentWrapper.classList.add('animating');
             this.playAnimation('close');
           } else {
@@ -18686,42 +18740,10 @@ method is called on the element.
         _onNeonAnimationFinish: function() {
           this.$.contentWrapper.classList.remove('animating');
           if (this.opened) {
-            Polymer.IronOverlayBehaviorImpl._renderOpened.apply(this);
+            Polymer.IronOverlayBehaviorImpl._finishRenderOpened.apply(this);
           } else {
-            Polymer.IronOverlayBehaviorImpl._renderClosed.apply(this);
+            Polymer.IronOverlayBehaviorImpl._finishRenderClosed.apply(this);
           }
-        },
-
-        /**
-         * Called when an `iron-resize` event fires.
-         */
-        _onIronResize: function() {
-          var containedElement = this.containedElement;
-          var scrollTop;
-          var scrollLeft;
-
-          if (this.opened && containedElement) {
-            scrollTop = containedElement.scrollTop;
-            scrollLeft = containedElement.scrollLeft;
-          }
-
-          if (this.opened) {
-            this._updateOverlayPosition();
-          }
-
-          Polymer.IronOverlayBehaviorImpl._onIronResize.apply(this, arguments);
-
-          if (this.opened && containedElement) {
-            containedElement.scrollTop = scrollTop;
-            containedElement.scrollLeft = scrollLeft;
-          }
-        },
-
-        /**
-         * Called when the `positionTarget` property changes.
-         */
-        _positionTargetChanged: function() {
-          this._updateOverlayPosition();
         },
 
         /**
@@ -18756,43 +18778,73 @@ method is called on the element.
         },
 
         /**
-         * Prepares the dropdown for opening by updating measured layout
-         * values.
+         * Updates the overlay position based on configured horizontal
+         * and vertical alignment.
          */
-        _prepareDropdown: function() {
-          this.sizingTarget = this.containedElement || this.sizingTarget;
-          this._updateAnimationConfig();
-          this._updateOverlayPosition();
+        _updateOverlayPosition: function() {
+          if (this.isAttached) {
+            // This triggers iron-resize, and iron-overlay-behavior will call refit if needed.
+            this.notifyResize();
+          }
         },
 
         /**
-         * Updates the overlay position based on configured horizontal
-         * and vertical alignment, and re-memoizes these values for the sake
-         * of behavior in `IronFitBehavior`.
+         * Useful to call this after the element, the window, or the `fitInfo`
+         * element has been resized. Will maintain the scroll position.
          */
-        _updateOverlayPosition: function() {
-          this._positionRectMemo = null;
-
-          if (!this.positionTarget) {
-            return;
+        refit: function () {
+          if (!this.opened) {
+            return
           }
+          var containedElement = this.containedElement;
+          var scrollTop;
+          var scrollLeft;
 
-          this.style[this._localeHorizontalAlign] =
-            this._horizontalAlignTargetValue + 'px';
-
-          this.style[this.verticalAlign] =
-            this._verticalAlignTargetValue + 'px';
-
-          // NOTE(cdata): We re-memoize inline styles here, otherwise
-          // calling `refit` from `IronFitBehavior` will reset inline styles
-          // to whatever they were when the dropdown first opened.
-          if (this._fitInfo) {
-            this._fitInfo.inlineStyle[this.horizontalAlign] =
-              this.style[this.horizontalAlign];
-
-            this._fitInfo.inlineStyle[this.verticalAlign] =
-              this.style[this.verticalAlign];
+          if (containedElement) {
+            scrollTop = containedElement.scrollTop;
+            scrollLeft = containedElement.scrollLeft;
           }
+          Polymer.IronFitBehavior.refit.apply(this, arguments);
+
+          if (containedElement) {
+            containedElement.scrollTop = scrollTop;
+            containedElement.scrollLeft = scrollLeft;
+          }
+        },
+
+        /**
+         * Resets the target element's position and size constraints, and clear
+         * the memoized data.
+         */
+        resetFit: function() {
+          Polymer.IronFitBehavior.resetFit.apply(this, arguments);
+
+          var hAlign = this._localeHorizontalAlign;
+          var vAlign = this.verticalAlign;
+          // Set to 0, 0 in order to discover any offset caused by parent stacking contexts.
+          this.style[hAlign] = this.style[vAlign] = '0px';
+
+          var dropdownRect = this.getBoundingClientRect();
+          var positionRect = this.positionTarget.getBoundingClientRect();
+          var horizontalValue = this._horizontalAlignTargetValue(dropdownRect, positionRect, hAlign === 'right');
+          var verticalValue = this._verticalAlignTargetValue(dropdownRect, positionRect, vAlign === 'bottom');
+
+          this.style[hAlign] = horizontalValue + 'px';
+          this.style[vAlign] = verticalValue + 'px';
+        },
+
+        /**
+         * Overridden from `IronFitBehavior`.
+         * Ensure positionedBy has correct values for horizontally & vertically.
+         */
+        _discoverInfo: function() {
+          Polymer.IronFitBehavior._discoverInfo.apply(this, arguments);
+          // Note(valdrin): in Firefox, an element with style `position: fixed; bottom: 90vh; height: 20vh`
+          // would have `getComputedStyle(element).top < 0` (instead of being `auto`) http://jsbin.com/cofired/3/edit?html,output
+          // This would cause IronFitBehavior's `constrain` to wrongly calculate sizes
+          // (it would use `top` instead of `bottom`), so we ensure we give the correct values.
+          this._fitInfo.positionedBy.horizontally = this._localeHorizontalAlign;
+          this._fitInfo.positionedBy.vertically = this.verticalAlign;
         },
 
         /**
@@ -26783,6 +26835,16 @@ In order to apply the `Roboto` font to this element, make sure you've imported `
           noCancelOnOutsideClick: {
             type: Boolean,
             value: true
+          },
+
+          /**
+           * Overridden from `IronOverlayBehavior`.
+           * Set to true to disable auto-focusing the toast or child nodes with
+           * the `autofocus` attribute` when the overlay is opened.
+           */
+          noAutoFocus: {
+            type: Boolean,
+            value: true
           }
         },
 
@@ -29729,7 +29791,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .deeplink:hover {
-        color: #666;
+        color: var(--paper-pink-500);
       }
 
       #signature {
@@ -29739,6 +29801,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         overflow: hidden;
         text-overflow: ellipsis;
         width: 260px;
+        color: black;
       }
 
       #signature .name {
@@ -29852,6 +29915,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       #meta {
         transition: opacity ease-in-out 150ms;
+        color: var(--paper-blue-500);
       }
       #desc {
         transition: transform ease-in-out 150ms, opacity  ease-in-out 150ms;
@@ -29913,7 +29977,7 @@ Give it a hydrolysis `PropertyDescriptor` (via `descriptor`), and watch it go!
 
     <div id="transitionMask">
       <div id="signature">
-        <a id="[[anchorId]]" href$="#[[anchorId]]" class="name deeplink">{{descriptor.name}}</a><span class="params">(<span>{{_paramText}}</span>)</span>
+        <a id$="[[anchorId]]" href$="#[[anchorId]]" class="name deeplink">{{descriptor.name}}</a><span class="params">(<span>{{_paramText}}</span>)</span>
         <span class="return" hidden$="{{!descriptor.return}}">➙ <span class="type">{{descriptor.return.type}}</span></span>
       </div>
       <div id="details">
@@ -29980,12 +30044,13 @@ Give it a hydrolysis `PropertyDescriptor` (via `descriptor`), and watch it go!
 
           /**
            * Unique anchor ID for deep-linking.
-           *
            */
           anchorId: {
             type: String,
-            reflectToAttribute: true
-          }
+            reflectToAttribute: true,
+          },
+
+          _paramText: String,
         },
 
         listeners: {
@@ -30102,7 +30167,6 @@ Give it a hydrolysis `PropertyDescriptor` (via `descriptor`), and watch it go!
     })();
   </script>
 </dom-module>
-
 <!--
 @license
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
@@ -30137,7 +30201,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .deeplink:hover {
-        color: #555;
+        color: var(--paper-pink-500);
       }
 
       #api {
@@ -30146,10 +30210,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       #api header {
-        @apply(--paper-font-subhead);
+        @apply(--paper-font-title);
 
         flex: 1;
-        padding-left: 16px;
       }
 
       #api a {
@@ -30168,9 +30231,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       #summary .markdown-html pre {
-        background-color: var(--paper-grey-50);
-        border: solid #e5e5e5;
-        border-width: 1px 0;
+        background-color: var(--paper-grey-200);
+        border-radius: 3px;
         font-size: 15px;
         overflow-x: auto;
         padding: 12px 24px;
@@ -30178,14 +30240,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       #summary .markdown-html table {
+        background-color: var(--paper-grey-200);
         border-collapse: collapse;
-        border-top: 1px solid #e5e5e5;
         margin: 12px 0;
         width: 100%;
       }
 
       #summary .markdown-html tr {
-        border-bottom: 1px solid #e5e5e5;
         padding: 0 18px;
       }
 
@@ -30204,53 +30265,79 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         padding-right: 24px;
       }
 
+      #summary .markdown-html td:first-child > code {
+        color: black;
+        font-weight: bold;
+      }
+
       #summary .markdown-html code {
         @apply(--paper-font-code1);
+        background: var(--paper-grey-200);
+        padding: 3px;
+        border-radius: 3px;
       }
 
       #summary .markdown-html p {
-        padding: 0 24px;
+        padding: 0;
       }
 
       #summary .markdown-html a {
+        background: none;
+        @apply(--paper-font-body1);
         color: var(--paper-indigo-a200);
         font-weight: 500;
         text-decoration: none;
       }
 
-      #summary .markdown-html h1,
-      #summary .markdown-html h2,
-      #summary .markdown-html h3,
-      #summary .markdown-html h4,
-      #summary .markdown-html h5 {
-        padding: 0 18px;
+      #summary .markdown-html h1 {
+        @apply(--paper-font-display1);
+      }
+
+      #summary .markdown-html h2 {
+        @apply(--paper-font-headline);
+      }
+
+      #summary .markdown-html h3 {
+        @apply(--paper-font-title);
+      }
+
+      #summary .markdown-html h4 {
+        @apply(--paper-font-subhead);
       }
 
       /* Property Sections */
 
       .card {
-        background: white;
-        border-radius: 2px;
-        border: 1px solid #e5e5e5;
         margin-bottom: 20px;
       }
 
-      .card > header {
-        border-bottom: 1px solid #e5e5e5;
+      .card a {
         font-size: 20px;
         font-weight: 400;
         line-height: 28px;
-        padding: 14px 24px;
+        line-height: 48px;
+      }
 
+      .card > header {
         @apply(--iron-doc-viewer-header);
       }
 
+      nav {
+        border-bottom: 1px solid var(--paper-grey-200);
+      }
+
       iron-doc-property {
-        border-bottom: 1px solid #e5e5e5;
+        background: var(--paper-grey-200);
+      }
+
+      iron-doc-property:first-of-type {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
       }
 
       iron-doc-property:last-of-type {
-        border-bottom-width: 0;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
       }
 
       /* Private Properties */
@@ -30261,6 +30348,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       :host(.show-private) iron-doc-property[private] {
         display: block;
+        background: var(--paper-grey-300);
       }
 
       iron-doc-property[configuration] {
@@ -30268,7 +30356,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       #behaviors > p {
-        border-bottom: 1px solid #e5e5e5;
         box-sizing: border-box;
         cursor: pointer;
         display: block;
@@ -30277,6 +30364,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       #behaviors > p:last-of-type {
         border-bottom: none;
+      }
+
+      paper-button:hover {
+        color: var(--paper-pink-500);
       }
     </style>
   </template>
@@ -30335,29 +30426,29 @@ property.
       <paper-button id="togglePrivate" on-tap="_togglePrivate">{{_privateToggleLabel}}</paper-button>
     </nav>
 
-    <section id="[[_formatAnchor(prefix,'properties')]]" class="card" hidden$="{{_noneToShow(_showPrivate,_properties)}}">
-      <header><a href="#[[_formatAnchor(prefix,'properties')]]" class="deeplink">Properties</a></header>
+    <section id$="[[_formatAnchor(prefix,'properties')]]" class="card" hidden$="{{_noneToShow(_showPrivate,_properties)}}">
+      <header><a href$="#[[_formatAnchor(prefix,'properties')]]" class="deeplink">Properties</a></header>
       <template is="dom-repeat" items="{{_properties}}" hidden$="{{!_properties.length}}">
         <iron-doc-property anchor-id="[[_formatAnchor(prefix,'property',item.name)]]" descriptor="{{item}}"></iron-doc-property>
       </template>
     </section>
 
-    <section id="[[_formatAnchor(prefix,'methods')]]" class="card" hidden$="{{_noneToShow(_showPrivate,_methods)}}">
-      <header><a href="#[[_formatAnchor(prefix,'methods')]]" class="deeplink">Methods</a></header>
+    <section id$="[[_formatAnchor(prefix,'methods')]]" class="card" hidden$="{{_noneToShow(_showPrivate,_methods)}}">
+      <header><a href$="#[[_formatAnchor(prefix,'methods')]]" class="deeplink">Methods</a></header>
       <template is="dom-repeat" items="{{_methods}}">
         <iron-doc-property anchor-id="[[_formatAnchor(prefix,'method',item.name)]]" descriptor="{{item}}"></iron-doc-property>
       </template>
     </section>
 
-    <section id="[[_formatAnchor(prefix,'events')]]" class="card" hidden$="{{_noneToShow(_showPrivate,_events)}}">
-      <header><a href="#[[_formatAnchor(prefix,'events')]" class="deeplink">Events</a></header>
+    <section id$="[[_formatAnchor(prefix,'events')]]" class="card" hidden$="{{_noneToShow(_showPrivate,_events)}}">
+      <header><a href$="#[[_formatAnchor(prefix,'events')]]" class="deeplink">Events</a></header>
       <template is="dom-repeat" items="{{_events}}">
         <iron-doc-property anchor-id="[[_formatAnchor(prefix,'event',item.name)]]" descriptor="{{item}}"></iron-doc-property>
       </template>
     </section>
 
-    <section id="[[_formatAnchor(prefix,'behaviors')]]" class="card" hidden$="{{_hideBehaviors(_behaviors)}}">
-      <header><a href="#[[_formatAnchor(prefix,'behaviors')]]" class="deeplink">Behaviors</a></header>
+    <section id$="[[_formatAnchor(prefix,'behaviors')]]" class="card" hidden$="{{_hideBehaviors(_behaviors)}}">
+      <header><a href$="#[[_formatAnchor(prefix,'behaviors')]]" class="deeplink">Behaviors</a></header>
       <template is="dom-repeat" items="{{_behaviors}}">
         <p on-click="_broadcastBehavior">{{item}}</p>
       </template>
@@ -30610,8 +30701,16 @@ documentation page including demos (if available).
         margin: -2px 5px 0 0;
       }
 
-      paper-toolbar a:hover, paper-toolbar a:hover iron-icon, paper-toolbar a.iron-selected, paper-toolbar a.iron-selected iron-icon {
+      paper-toolbar a.iron-selected, paper-toolbar a.iron-selected iron-icon {
         color: var(--paper-grey-800);
+      }
+
+      paper-toolbar a:hover, paper-toolbar a:hover iron-icon {
+        color: var(--paper-pink-500);
+      }
+
+      select {
+        cursor: pointer;
       }
 
       #demo iframe {
@@ -30888,6 +30987,8 @@ documentation page including demos (if available).
            * @type {!hydrolysis.ElementDescriptor}
            */
           _activeDescriptor: Object,
+
+          _fragmentPrefix: String,
 
           /**
            * Toggle flag to be used when this element is being displayed in the
@@ -32569,20 +32670,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       /**
        * Specifies the element that will handle the scroll event
-       * on the behalf of the current element. This is typically a reference to an `Element`,
+       * on the behalf of the current element. This is typically a reference to an element,
        * but there are a few more posibilities:
        *
        * ### Elements id
        *
        *```html
-       * <div id="scrollable-element" style="overflow-y: auto;">
+       * <div id="scrollable-element" style="overflow: auto;">
        *  <x-element scroll-target="scrollable-element">
-       *    Content
+       *    <!-- Content-->
        *  </x-element>
        * </div>
        *```
-       * In this case, `scrollTarget` will point to the outer div element. Alternatively,
-       * you can set the property programatically:
+       * In this case, the `scrollTarget` will point to the outer div element. 
+       *
+       * ### Document scrolling
+       *
+       * For document scrolling, you can use the reserved word `document`:
+       *
+       *```html
+       * <x-element scroll-target="document">
+       *   <!-- Content -->
+       * </x-element>
+       *```
+       *
+       * ### Elements reference
        *
        *```js
        * appHeader.scrollTarget = document.querySelector('#scrollable-element');
@@ -32606,18 +32718,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       // Remove lister to the current scroll target
       if (this._oldScrollTarget) {
         if (this._oldScrollTarget === this._doc) {
+        
           window.removeEventListener('scroll', this._boundScrollHandler);
+        
         } else if (this._oldScrollTarget.removeEventListener) {
+        
           this._oldScrollTarget.removeEventListener('scroll', this._boundScrollHandler);
+        
         }
         this._oldScrollTarget = null;
       }
       if (isAttached) {
         // Support element id references
-        if (typeof scrollTarget === 'string') {
+        if (scrollTarget === 'document') {
 
-          var host = this.domHost;
-          this.scrollTarget = host && host.$ ? host.$[scrollTarget] : 
+          this.scrollTarget = this._doc;
+
+        } else if (typeof scrollTarget === 'string') {
+
+          this.scrollTarget = this.domHost ? this.domHost.$[scrollTarget] :
               Polymer.dom(this.ownerDocument).querySelector('#' + scrollTarget);
 
         } else if (this._scrollHandler) {
@@ -32638,7 +32757,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     },
 
     /**
-     * Runs on every scroll event. Consumer of this behavior may want to override this method.
+     * Runs on every scroll event. Consumer of this behavior may override this method.
      *
      * @protected
      */
@@ -33044,10 +33163,6 @@ will only render 20.
       Polymer.IronScrollTargetBehavior
     ],
 
-    listeners: {
-      'iron-resize': '_resizeHandler'
-    },
-
     keyBindings: {
       'up': '_didMoveUp',
       'down': '_didMoveDown',
@@ -33351,10 +33466,14 @@ will only render 20.
     attached: function() {
       this.updateViewportBoundaries();
       this._render();
+      // `iron-resize` is fired when the list is attached if the event is added
+      // before attached causing unnecessary work.
+      this.listen(this, 'iron-resize', '_resizeHandler');
     },
 
     detached: function() {
       this._itemsRendered = false;
+      this.unlisten(this, 'iron-resize', '_resizeHandler');
     },
 
     /**
@@ -33475,11 +33594,9 @@ will only render 20.
       }
 
       if (recycledTiles === 0) {
-        // If the list ever reach this case, the physical average is not significant enough
-        // to create all the items needed to cover the entire viewport.
-        // e.g. A few items have a height that differs from the average by serveral order of magnitude.
+        // Try to increase the pool if the list's client height isn't filled up with physical items
         if (physicalBottom < scrollBottom || this._physicalTop > scrollTop) {
-          this.async(this._increasePool.bind(this, 1));
+          this._increasePoolIfNeeded();
         }
       } else {
         this._virtualStart = this._virtualStart + recycledTiles;
@@ -33534,19 +33651,27 @@ will only render 20.
 
     /**
      * Increases the pool of physical items only if needed.
-     * This function will allocate additional physical items
-     * if the physical size is shorter than `_optPhysicalSize`
+     *
+     * @return {boolean} True if the pool was increased.
      */
     _increasePoolIfNeeded: function() {
-      if (this._viewportSize === 0 || this._physicalSize >= this._optPhysicalSize) {
+      // Base case 1: the list has no size.
+      if (this._viewportSize === 0) {
         return false;
       }
-      // 0 <= `currentPage` <= `_maxPages`
+      // Base case 2: If the physical size is optimal and the list's client height is full
+      // with physical items, don't increase the pool.
+      var isClientHeightFull = this._physicalBottom >= this._scrollBottom && this._physicalTop <= this._scrollPosition;
+      if (this._physicalSize >= this._optPhysicalSize && isClientHeightFull) {
+        return false;
+      }
+      // this value should range between [0 <= `currentPage` <= `_maxPages`]
       var currentPage = Math.floor(this._physicalSize / this._viewportSize);
+
       if (currentPage === 0) {
         // fill the first page
         this._debounceTemplate(this._increasePool.bind(this, Math.round(this._physicalCount * 0.5)));
-      } else if (this._lastPage !== currentPage) {
+      } else if (this._lastPage !== currentPage && isClientHeightFull) {
         // paint the page and defer the next increase
         // wait 16ms which is rough enough to get paint cycle.
         Polymer.dom.addDebouncer(this.debounce('_debounceTemplate', this._increasePool.bind(this, 1), 16));
@@ -33554,7 +33679,9 @@ will only render 20.
         // fill the rest of the pages
         this._debounceTemplate(this._increasePool.bind(this, 1));
       }
+
       this._lastPage = currentPage;
+
       return true;
     },
 
@@ -33600,7 +33727,6 @@ will only render 20.
       if (this.isAttached && !this._itemsRendered && this._isVisible && requiresUpdate) {
         this._lastPage = 0;
         this._update();
-        this._scrollHandler();
         this._itemsRendered = true;
       }
     },
@@ -33695,7 +33821,7 @@ will only render 20.
       if (!el) {
         return;
       }
-        
+
       inst = el._templateInstance;
 
       if (inst.__key__ !== key) {
@@ -33979,7 +34105,7 @@ will only render 20.
       // update the position of the items
       this._positionItems();
       // set the new scroll position
-      this._resetScrollPosition(this._physicalTop + this._scrollerPaddingTop + targetOffsetTop + 1);
+      this._resetScrollPosition(this._physicalTop + this._scrollerPaddingTop + targetOffsetTop);
       // increase the pool of physical items if needed
       this._increasePoolIfNeeded();
       // clear cached visible index
@@ -34004,14 +34130,19 @@ will only render 20.
       if (IOS && Math.abs(this._viewportSize - this._scrollTargetHeight) < 100) {
         return;
       }
-      this._debounceTemplate(function() {
-        this._render();
-        if (this._itemsRendered && this._physicalItems && this._isVisible) {
-          this._resetAverage();
-          this.updateViewportBoundaries();
-          this.scrollToIndex(this.firstVisibleIndex);
-        }
-      });
+      // In Desktop Safari 9.0.3, if the scroll bars are always shown, 
+      // changing the scroll position from a resize handler would result in 
+      // the scroll position being reset. Waiting 1ms fixes the issue. 
+      Polymer.dom.addDebouncer(this.debounce('_debounceTemplate',
+        function() {
+          this._render();
+
+          if (this._itemsRendered && this._physicalItems && this._isVisible) {
+            this._resetAverage();
+            this.updateViewportBoundaries();
+            this.scrollToIndex(this.firstVisibleIndex);
+          }
+        }.bind(this), 1));
     },
 
     _getModelFromItem: function(item) {
