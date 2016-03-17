@@ -34,7 +34,7 @@ System.config({
     "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.1.1.2",
     "babel": "npm:babel-core@5.8.35",
     "babel-polyfill": "npm:babel-polyfill@6.7.2",
-    "babel-runtime": "npm:babel-runtime@5.8.35",
+    "babel-runtime": "npm:babel-runtime@6.6.1",
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "core-js": "npm:core-js@2.1.3",
     "fetch": "github:github/fetch@0.10.1",
@@ -190,7 +190,17 @@ System.config({
     "npm:babel-runtime@5.8.35": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:babel-runtime@6.6.1": {
+      "core-js": "npm:core-js@2.2.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:core-js@2.1.3": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:core-js@2.2.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
@@ -325,6 +335,22 @@ System.config({
       "framework-selector.js",
       "github:github/fetch@0.10.1.js",
       "github:github/fetch@0.10.1/fetch.js",
+      "npm:babel-runtime@6.6.1/core-js/object/get-own-property-descriptor.js",
+      "npm:babel-runtime@6.6.1/core-js/reflect/metadata.js",
+      "npm:core-js@2.2.0/library/fn/object/get-own-property-descriptor.js",
+      "npm:core-js@2.2.0/library/fn/reflect/metadata.js",
+      "npm:core-js@2.2.0/library/modules/_array-methods.js",
+      "npm:core-js@2.2.0/library/modules/_array-species-create.js",
+      "npm:core-js@2.2.0/library/modules/_collection-strong.js",
+      "npm:core-js@2.2.0/library/modules/_collection-weak.js",
+      "npm:core-js@2.2.0/library/modules/_collection.js",
+      "npm:core-js@2.2.0/library/modules/_metadata.js",
+      "npm:core-js@2.2.0/library/modules/_object-assign.js",
+      "npm:core-js@2.2.0/library/modules/_object-sap.js",
+      "npm:core-js@2.2.0/library/modules/es6.map.js",
+      "npm:core-js@2.2.0/library/modules/es6.object.get-own-property-descriptor.js",
+      "npm:core-js@2.2.0/library/modules/es6.weak-map.js",
+      "npm:core-js@2.2.0/library/modules/es7.reflect.metadata.js",
       "polymer-app/app.html!github:systemjs/plugin-text@0.0.3.js",
       "polymer-app/app.js",
       "polymer-app/blur-image.js",

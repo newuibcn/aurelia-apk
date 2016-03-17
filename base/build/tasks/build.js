@@ -33,7 +33,15 @@ gulp.task('build-system', function() {
       .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
       .pipe(changed(paths.output, {extension: '.js'}))
       .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(to5(assign({}, compilerOptions, {modules: 'system'})))
+      .pipe(to5({
+          "presets": [
+              "es2015",
+              "stage-3"
+          ],
+          "plugins": [
+              "transform-runtime"
+          ]
+      }))
       .pipe(sourcemaps.write({includeContent: true}))
       .pipe(gulp.dest(paths.output));
 });

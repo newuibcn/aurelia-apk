@@ -1,7 +1,7 @@
 {
   "files": {
     "config": {
-      "version": "b90e28856dd9d6282ae534bdf07087f622417a0a",
+      "version": "9d791c87399477cbee27f4d5c258b4a615c39b3d",
       "filename": "config.js"
     },
     "styles": {
@@ -13,7 +13,7 @@
       "filename": "styles/custom.css"
     },
     "app-build": {
-      "version": "322a22810142e5abf258e816ab320dbd8a6897a5",
+      "version": "d119a92aca772a5f87ef4743919f0a951d91c391",
       "filename": "dist/app-build.js"
     },
     "aurelia": {
@@ -21,7 +21,7 @@
       "filename": "dist/aurelia.js"
     },
     "main": {
-      "version": "c79e9364fcb3a311978f9ae4dd3236a508466227",
+      "version": "76a6979fc2be58270cc0a9a40ee4a1ab9d3d2c9b",
       "filename": "dist/main.js"
     },
     "polymer": {
@@ -29,7 +29,7 @@
       "filename": "dist/polymer.html"
     },
     "push-receiver": {
-      "version": "4fa9f3772124c0624c54f2326f75df3dd4130108",
+      "version": "70cdd8bd78766c34cb07320f3a96c55de703ebe8",
       "filename": "dist/core/cordova/push-receiver.js"
     },
     "index": {
@@ -82,5 +82,5 @@
     }
   },
   "load": [],
-  "version": "26b0e966c26fadb69063dde5f5274969bf42bf9d"
+  "version": "68181844a8ed473c09b2e7d4f58e2686349df3f5"
 }

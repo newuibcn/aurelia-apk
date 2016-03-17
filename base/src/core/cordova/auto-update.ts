@@ -2,7 +2,6 @@
  * Created by alexvizcaino on 11/3/16.
  */
 import {IFileTransfer, IFileSystem, TrackedFile, Manifest, NetworkInformation, FileEntry, FileSystem, DirectoryEntry, Entry} from "auto-updater";
-import 'babel-polyfill';
 
 class Autoupdater{
     constructor(private _fileTransfer: IFileTransfer, private _fileSystem: IFileSystem, private _networkInformation: NetworkInformation,
@@ -47,7 +46,7 @@ class Autoupdater{
 
         for(let file in localManifest.files){
             files.push(localManifest.files[file]);
-        };
+        }
 
         let result;
         for(var i = 0; i < files.length; i++){
@@ -157,6 +156,8 @@ class FileSystemService implements IFileSystem{
 
     constructor(){
         this.xhr = new XMLHttpRequest();
+        //this.xhr.setRequestHeader("Access-Control-Allow-Origin", '*');
+        //this.xhr.setRequestHeader('Accept', 'application/json');
         this._fs = new FileSystemImpl();
         this._ft = new FileTransferService();
     }
@@ -169,11 +170,21 @@ class FileSystemService implements IFileSystem{
             this.xhr.onerror = (ev) =>{
                 reject('Error getting file from ' + path);
             }
-            this.xhr.onload = (ev) => {
-                if (this.xhr.status < 200 || this.xhr.status >= 300) {
+            /*this.xhr.onload = (ev) => {
+                if (this.xhr.response == null || (this.xhr.status < 200 || this.xhr.status >= 300)) {
                     reject(this.xhr.responseText);
                 }
                 resolve(this.xhr.response);
+            }*/
+            this.xhr.onreadystatechange = (ev) => {
+                if(this.xhr.readyState == 4){
+                    var response;
+                    if(this.xhr.status === 0 || this.xhr.status === 200){
+                        resolve(this.xhr.response);
+                    } else {
+                        reject(this.xhr.responseText);
+                    }
+                }
             }
         })
     }
@@ -217,8 +228,25 @@ class FileSystemService implements IFileSystem{
         return new Promise<boolean>((resolve, reject) => {
             entry.copyTo(directory, entry.name, (entry: Entry) => {
                 resolve(true);
-            }, (error) => {
-                resolve(false);
+            }, (error: any) => {
+                if(error.code == 12){
+                    this.removeFile(directory.fullPath + entry.name)
+                        .then((r) => {
+                            if(r){
+                                this.copyFile(directory, entry)
+                                    .then((r) => {
+                                        resolve(r);
+                                    });
+                            } else {
+                                resolve(false);
+                            }
+                        })
+                        .catch((e) => {
+                            resolve(false);
+                        })
+                } else {
+                    resolve(false);
+                }
             })
         });
     }
