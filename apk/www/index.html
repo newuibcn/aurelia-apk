@@ -19,9 +19,34 @@
             img-src * 'self' data:;
             style-src * http://mys.newuibcn.com 'unsafe-inline';
             script-src * http://mys.newuibcn.com 'unsafe-eval' 'unsafe-inline'">
+    <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
 </head>
 <body>
-<H1>Test Autoupdate</H1>
+<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+<style is="custom-style">
+    paper-spinner.multi {
+        --paper-spinner-layer-1-color: var(--paper-purple-500);
+        --paper-spinner-layer-2-color: var(--paper-cyan-500);
+        --paper-spinner-layer-3-color: var(--paper-blue-grey-500);
+        --paper-spinner-layer-4-color: var(--paper-amber-500);
+    }
+</style>
+<style>
+    .absolute-centering{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+</style>
+
+<div class="absolute-centering">
+    <paper-spinner class="multi" alt="Checking for updates..." active></paper-spinner>
+    <h3>Checking for updates...</h3>
+</div>
+
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 <script type="text/javascript" charset="utf-8" src="jspm_packages/system.js"></script>
 <script>

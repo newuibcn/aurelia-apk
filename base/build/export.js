@@ -38,6 +38,15 @@ module.exports = {
     "bower_components/prism/themes/prism.css",
     "bower_components/promise-polyfill/Promise.js",
     "bower_components/web-animations-js/web-animations-next-lite.min.js",
-    "bower_components/webcomponentsjs/webcomponents-lite.min.js"
+    "bower_components/webcomponentsjs/webcomponents-lite.min.js",
+
+    "bower_components/paper-spinner/paper-spinner.html",
+    "bower_components/paper-spinner/paper-spinner-behavior.html",
+    "bower_components/paper-spinner/paper-spinner-styles.html",
+    "bower_components/paper-styles/color.html",
+    "bower_components/polymer/polymer.html",
+    "bower_components/polymer/polymer-mini.html",
+    "bower_components/polymer/polymer-micro.html",
+    "bower_components/iron-flex-layout/iron-flex-layout.html"
   ]
 };
