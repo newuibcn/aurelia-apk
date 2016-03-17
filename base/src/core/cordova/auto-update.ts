@@ -3,7 +3,7 @@
  */
 import {IFileTransfer, IFileSystem, TrackedFile, Manifest, NetworkInformation, FileEntry, FileSystem, DirectoryEntry, Entry} from "auto-updater";
 
-class Autoupdater{
+export class Autoupdater{
     constructor(private _fileTransfer: IFileTransfer, private _fileSystem: IFileSystem, private _networkInformation: NetworkInformation,
                 private _rootDirectory: string, private _serverUrl: string){
     }

@@ -1,7 +1,7 @@
 module.exports = function(config) {
   config.set({
     basePath: './',
-    frameworks: ['systemjs', 'jasmine'],
+    frameworks: ['systemjs', 'mocha', 'chai', 'sinon'],
     systemjs: {
       configFile: 'config.js',
       config: {
@@ -29,7 +29,7 @@ module.exports = function(config) {
       ]
     },
     files: [
-      'test/unit/*.ts'
+      'test/unit/*.spec.ts'
     ],
     exclude: [],
     preprocessors: { },

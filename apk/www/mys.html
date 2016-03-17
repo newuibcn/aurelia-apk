@@ -2,6 +2,23 @@
 <html>
   <head>
     <title>Aurelia</title>
+    <meta http-equiv="Content-Security-Policy"
+          content="
+            default-src
+                *
+                http://mys.newuibcn.com
+                http://mys.newuibcn.com
+                http://mys.newuibcn.com
+                data:
+                http://mys.newuibcn.com;
+            font-src
+                'self'
+                https://fonts.gstatic.com
+                http://mys.newuibcn.com
+                data:;
+            img-src * 'self' data:;
+            style-src * http://mys.newuibcn.com 'unsafe-inline';
+            script-src * http://mys.newuibcn.com 'unsafe-eval' 'unsafe-inline'">
     <link rel="stylesheet" href="jspm_packages/npm/font-awesome@4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/custom.css">

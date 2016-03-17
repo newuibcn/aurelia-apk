@@ -36,7 +36,7 @@ System.config({
     "babel-polyfill": "npm:babel-polyfill@6.7.2",
     "babel-runtime": "npm:babel-runtime@6.6.1",
     "bootstrap": "github:twbs/bootstrap@3.3.6",
-    "core-js": "npm:core-js@2.1.3",
+    "core-js": "npm:core-js@2.2.0",
     "fetch": "github:github/fetch@0.10.1",
     "font-awesome": "npm:font-awesome@4.5.0",
     "jquery": "github:components/jquery@2.2.1",
@@ -181,7 +181,7 @@ System.config({
     "npm:babel-polyfill@6.7.2": {
       "babel-regenerator-runtime": "npm:babel-regenerator-runtime@6.5.0",
       "babel-runtime": "npm:babel-runtime@5.8.35",
-      "core-js": "npm:core-js@2.1.3",
+      "core-js": "npm:core-js@2.2.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:babel-regenerator-runtime@6.5.0": {
@@ -193,12 +193,6 @@ System.config({
     "npm:babel-runtime@6.6.1": {
       "core-js": "npm:core-js@2.2.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:core-js@2.1.3": {
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "path": "github:jspm/nodelibs-path@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:core-js@2.2.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -229,6 +223,8 @@ System.config({
       "github:components/jquery@2.2.1/jquery.js",
       "github:github/fetch@0.10.1.js",
       "github:github/fetch@0.10.1/fetch.js",
+      "github:jspm/nodelibs-process@0.1.2.js",
+      "github:jspm/nodelibs-process@0.1.2/index.js",
       "github:twbs/bootstrap@3.3.6.js",
       "github:twbs/bootstrap@3.3.6/css/bootstrap.css!github:systemjs/plugin-text@0.0.3.js",
       "github:twbs/bootstrap@3.3.6/js/bootstrap.js",
@@ -312,7 +308,11 @@ System.config({
       "npm:aurelia-templating-router@1.0.0-beta.1.1.2/route-loader.js",
       "npm:aurelia-templating-router@1.0.0-beta.1.1.2/router-view.js",
       "npm:aurelia-templating@1.0.0-beta.1.1.2.js",
-      "npm:aurelia-templating@1.0.0-beta.1.1.2/aurelia-templating.js"
+      "npm:aurelia-templating@1.0.0-beta.1.1.2/aurelia-templating.js",
+      "npm:core-js@2.2.0.js",
+      "npm:core-js@2.2.0/client/shim.min.js",
+      "npm:process@0.11.2.js",
+      "npm:process@0.11.2/browser.js"
     ],
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.3.js",

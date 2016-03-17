@@ -1,6 +1,7 @@
 import './setup';
-import {Users} from 'src/users';
+import {Users} from 'src/bootstrap-app/users';
 import {HttpClient} from 'aurelia-fetch-client';
+var  expect = chai.expect;
 
 class HttpStub {
   items: any[];
@@ -29,8 +30,8 @@ describe('the Users module', () => {
     http.items = itemStubs;
     
     sut.activate().then(() => {
-      expect(sut.users).toBe(itemStubs);
-      expect(sut.users).not.toBe(itemFake);
+      expect(sut.users).to.be.eq(itemStubs);
+      expect(sut.users).not.to.be.eq(itemFake);
       done();
     });
   });
