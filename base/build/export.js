@@ -12,6 +12,7 @@ module.exports = {
     "jspm_packages/system-csp-production.js",
     "jspm_packages/system-register-only.js",
     "styles/*.css",
+    "fonts/**/*",
     "dist/polymer.html",
     "dist/core/cordova/push-receiver.js",
     "dist/core/cordova/auto-update.js",

@@ -10,6 +10,7 @@ var typescript = require('gulp-tsb');
 var to5 = require('gulp-babel');
 var compilerOptions = require('../babel-options');
 var exec = require('gulp-exec');
+var replace = require('gulp-replace');
 
 // transpiles changed es6 files to SystemJS format
 // the plumber() call prevents 'pipe breaking' caused
@@ -86,3 +87,10 @@ gulp.task('build-polymer', function(){
     .pipe(exec('vulcanize <%= file.path %> -o dist/polymer.html --inlineCss --inlineScripts --stripComments --'))
     .pipe(exec.reporter(reportOptions));
 });
+
+gulp.task('polymer-replace-fonts', function(){
+    return gulp.src([paths.output + 'polymer.html'])
+        .pipe(replace('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic">', '<link rel="stylesheet" href="../../styles/fonts.css">'))
+        .pipe(replace('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700">', '<link rel="stylesheet" href="../../styles/fonts.css">'))
+        .pipe(gulp.dest(paths.output));
+})
