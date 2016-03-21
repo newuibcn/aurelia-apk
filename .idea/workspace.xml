@@ -1,198 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b527165-ef15-4747-bdd9-9829c2e8c63c" name="Default" comment="new checking updates screen for autoupdater">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_black_macroman/Roboto-Black-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_black_macroman/Roboto-Black-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_black_macroman/Roboto-Black-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_black_macroman/specimen_files/Roboto-Black-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_blackitalic_macroman/Roboto-BlackItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_blackitalic_macroman/Roboto-BlackItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_blackitalic_macroman/Roboto-BlackItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_blackitalic_macroman/specimen_files/Roboto-BlackItalic-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bold_macroman/Roboto-Bold-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bold_macroman/Roboto-Bold-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bold_macroman/Roboto-Bold-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bold_macroman/specimen_files/Roboto-Bold-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondensed_macroman/specimen_files/RobotoCondensed-Bold-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondenseditalic_macroman/RobotoCondensed-BoldItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondenseditalic_macroman/RobotoCondensed-BoldItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondenseditalic_macroman/RobotoCondensed-BoldItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondenseditalic_macroman/specimen_files/RobotoCondensed-BoldItalic-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bolditalic_macroman/Roboto-BoldItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bolditalic_macroman/Roboto-BoldItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bolditalic_macroman/Roboto-BoldItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bolditalic_macroman/specimen_files/Roboto-BoldItalic-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condensed_macroman/RobotoCondensed-Regular-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condensed_macroman/RobotoCondensed-Regular-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condensed_macroman/RobotoCondensed-Regular-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condensed_macroman/specimen_files/RobotoCondensed-Regular-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condenseditalic_macroman/RobotoCondensed-Italic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condenseditalic_macroman/RobotoCondensed-Italic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condenseditalic_macroman/RobotoCondensed-Italic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condenseditalic_macroman/specimen_files/RobotoCondensed-Italic-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_italic_macroman/Roboto-Italic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_italic_macroman/Roboto-Italic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_italic_macroman/Roboto-Italic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_italic_macroman/specimen_files/Roboto-Italic-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_light_macroman/Roboto-Light-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_light_macroman/Roboto-Light-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_light_macroman/Roboto-Light-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_light_macroman/specimen_files/Roboto-Light-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondensed_macroman/RobotoCondensed-Light-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondensed_macroman/RobotoCondensed-Light-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondensed_macroman/RobotoCondensed-Light-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondensed_macroman/specimen_files/RobotoCondensed-Light-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondenseditalic_macroman/RobotoCondensed-LightItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondenseditalic_macroman/RobotoCondensed-LightItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondenseditalic_macroman/RobotoCondensed-LightItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondenseditalic_macroman/specimen_files/RobotoCondensed-LightItalic-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightitalic_macroman/Roboto-LightItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightitalic_macroman/Roboto-LightItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightitalic_macroman/Roboto-LightItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightitalic_macroman/specimen_files/Roboto-LightItalic-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_medium_macroman/Roboto-Medium-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_medium_macroman/Roboto-Medium-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_medium_macroman/Roboto-Medium-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_medium_macroman/specimen_files/Roboto-Medium-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_mediumitalic_macroman/Roboto-MediumItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_mediumitalic_macroman/Roboto-MediumItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_mediumitalic_macroman/Roboto-MediumItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_mediumitalic_macroman/specimen_files/Roboto-MediumItalic-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_regular_macroman/specimen_files/Roboto-Regular-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thin_macroman/Roboto-Thin-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thin_macroman/Roboto-Thin-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thin_macroman/Roboto-Thin-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thin_macroman/specimen_files/Roboto-Thin-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thinitalic_macroman/specimen_files/Roboto-ThinItalic-cleartype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_black_macroman/Roboto-Black-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_black_macroman/Roboto-Black-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_black_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_black_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_black_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_black_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_blackitalic_macroman/Roboto-BlackItalic-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_blackitalic_macroman/Roboto-BlackItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_blackitalic_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_blackitalic_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_blackitalic_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_blackitalic_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bold_macroman/Roboto-Bold-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bold_macroman/Roboto-Bold-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bold_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bold_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bold_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bold_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondensed_macroman/RobotoCondensed-Bold-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondensed_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondensed_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondensed_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondensed_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondenseditalic_macroman/RobotoCondensed-BoldItalic-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondenseditalic_macroman/RobotoCondensed-BoldItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondenseditalic_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondenseditalic_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondenseditalic_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_boldcondenseditalic_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bolditalic_macroman/Roboto-BoldItalic-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bolditalic_macroman/Roboto-BoldItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bolditalic_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bolditalic_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bolditalic_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_bolditalic_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condensed_macroman/RobotoCondensed-Regular-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condensed_macroman/RobotoCondensed-Regular-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condensed_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condensed_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condensed_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condensed_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condenseditalic_macroman/RobotoCondensed-Italic-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condenseditalic_macroman/RobotoCondensed-Italic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condenseditalic_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condenseditalic_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condenseditalic_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_condenseditalic_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_italic_macroman/Roboto-Italic-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_italic_macroman/Roboto-Italic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_italic_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_italic_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_italic_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_italic_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_light_macroman/Roboto-Light-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_light_macroman/Roboto-Light-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_light_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_light_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_light_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_light_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondensed_macroman/RobotoCondensed-Light-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondensed_macroman/RobotoCondensed-Light-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondensed_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondensed_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondensed_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondensed_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondenseditalic_macroman/RobotoCondensed-LightItalic-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondenseditalic_macroman/RobotoCondensed-LightItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondenseditalic_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondenseditalic_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondenseditalic_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightcondenseditalic_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightitalic_macroman/Roboto-LightItalic-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightitalic_macroman/Roboto-LightItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightitalic_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightitalic_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightitalic_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_lightitalic_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_medium_macroman/Roboto-Medium-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_medium_macroman/Roboto-Medium-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_medium_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_medium_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_medium_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_medium_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_mediumitalic_macroman/Roboto-MediumItalic-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_mediumitalic_macroman/Roboto-MediumItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_mediumitalic_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_mediumitalic_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_mediumitalic_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_mediumitalic_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_regular_macroman/Roboto-Regular-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_regular_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_regular_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_regular_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_regular_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thin_macroman/Roboto-Thin-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thin_macroman/Roboto-Thin-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thin_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thin_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thin_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thin_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thinitalic_macroman/specimen_files/easytabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thinitalic_macroman/specimen_files/grid_12-825-55-15.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thinitalic_macroman/specimen_files/specimen_stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/fonts/roboto/roboto_thinitalic_macroman/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/styles/fonts.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/polymer-app/nav-bar.html" afterPath="" />
+    <list default="true" id="0b527165-ef15-4747-bdd9-9829c2e8c63c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/build/export.js" afterPath="$PROJECT_DIR$/base/build/export.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/build/tasks/build.js" afterPath="$PROJECT_DIR$/base/build/tasks/build.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/build/tasks/serve.js" afterPath="$PROJECT_DIR$/base/build/tasks/serve.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/config.js" afterPath="$PROJECT_DIR$/base/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/index.html" afterPath="$PROJECT_DIR$/base/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/package.json" afterPath="$PROJECT_DIR$/base/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/polymer-app/app.html" afterPath="$PROJECT_DIR$/base/src/polymer-app/app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/styles/custom.css" afterPath="$PROJECT_DIR$/base/styles/custom.css" />
     </list>
     <ignored path="aurelia-apk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -212,7 +24,58 @@
     <favorites_list name="aurelia-apk" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/src/app.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/base/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.77374303">
+              <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.625">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/src/app.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.416667">
+              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/src/main.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -230,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apk/www/manifest.json" />
         <option value="$PROJECT_DIR$/base/src/core/system-register-only.js" />
         <option value="$PROJECT_DIR$/install.sh" />
         <option value="$PROJECT_DIR$/base/tsconfig-es5.json" />
@@ -242,7 +104,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/base/export/new-file.html" />
         <option value="$PROJECT_DIR$/base/build/tasks/git.js" />
-        <option value="$PROJECT_DIR$/base/src/app.ts" />
         <option value="$PROJECT_DIR$/base/export/server/index.js" />
         <option value="$PROJECT_DIR$/base/server/index.js" />
         <option value="$PROJECT_DIR$/base/src/core/cordova/auto-update.js" />
@@ -268,11 +129,8 @@
         <option value="$PROJECT_DIR$/base/build/tasks/serve.js" />
         <option value="$PROJECT_DIR$/base/build/tasks/build.js" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/nav-bar.html" />
-        <option value="$PROJECT_DIR$/base/src/app.html" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/welcome.html" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/app.ts" />
-        <option value="$PROJECT_DIR$/base/index.html" />
-        <option value="$PROJECT_DIR$/base/config.js" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/list-item.html" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/list-item.ts" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/proto-element.ts" />
@@ -281,6 +139,11 @@
         <option value="$PROJECT_DIR$/base/src/polymer-app/proto-element.html" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/list.html" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/app.html" />
+        <option value="$PROJECT_DIR$/base/config.js" />
+        <option value="$PROJECT_DIR$/base/src/app.html" />
+        <option value="$PROJECT_DIR$/base/src/main.ts" />
+        <option value="$PROJECT_DIR$/base/src/app.ts" />
+        <option value="$PROJECT_DIR$/base/index.html" />
       </list>
     </option>
   </component>
@@ -527,6 +390,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurelia-apk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurelia-apk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -729,7 +610,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458212771198</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="roboto fonts">
+      <created>1458550215921</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1458550215922</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -737,24 +624,24 @@
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1808604" sideWeight="0.5273523" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22370012" sideWeight="0.4726477" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22370012" sideWeight="0.4726477" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32599118" sideWeight="0.408658" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.4439776" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.4969697" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3274596" sideWeight="0.5560224" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3274596" sideWeight="0.5560224" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16362192" sideWeight="0.5273523" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -785,7 +672,8 @@
     <MESSAGE value="build for ios full working" />
     <MESSAGE value="load app from local copy when no update is possible" />
     <MESSAGE value="new checking updates screen for autoupdater" />
-    <option name="LAST_COMMIT_MESSAGE" value="new checking updates screen for autoupdater" />
+    <MESSAGE value="roboto fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="roboto fonts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1014,24 +902,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45572916">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base/src/polymer-app/app.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5882353">
           <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/app.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1056,13 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2717087">
-          <caret line="31" column="69" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base/jspm_packages/npm/aurelia-templating@1.0.0-beta.1.1.2/aurelia-templating.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -1082,14 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7580645">
           <caret line="441" column="5" selection-start-line="441" selection-start-column="5" selection-end-line="441" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2567237">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1122,6 +981,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3838631">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.416667">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77374303">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
           <folding />
         </state>
       </provider>
