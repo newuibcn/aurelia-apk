@@ -1,0 +1,54 @@
+<dom-module id="proto-element">
+    <template>
+        <iron-list id="bindable-items" items="{{books}}" as="item">
+            <template>
+                <paper-item>
+                    <b>#[[index]] - [[item.name]]</b>
+                </paper-item>
+            </template>
+        </iron-list>
+
+        <iron-ajax url="../../test-data/contacts.json" last-response="{{data}}" auto></iron-ajax>
+        <iron-list id="ajax-items" items="[[data]]" as="item">
+            <template>
+                <paper-item>
+                    <b>#[[index]] - [[item.name]]</b>
+                </paper-item>
+            </template>
+        </iron-list>
+    </template>
+
+    <script>
+        // register a new element called proto-element
+        Polymer({
+            is: "proto-element",
+            properties: {
+                books: {
+                    type: Array
+                }
+            },
+            observers: [
+              'booksChanged(books)'
+            ],
+            booksChanged: function(data){
+                alert('changed');
+              console.log(data);
+            },
+            created: function(){
+                alert('created');
+            },
+            // add a callback to the element's prototype
+            ready: function() {
+                alert('ready');
+                $(this.parentElement.parentElement).scroll(function(){
+                    document.querySelector('#bindable-items').fire('iron-resize');
+                    document.querySelector('#ajax-items').fire('iron-resize');
+                });
+            },
+            attached: function(){
+                alert('attached');
+            }
+        });
+
+    </script>
+</dom-module>
