@@ -1,11 +1,11 @@
 <template>
-    <require from="./custom-list"></require>
+    <require from="./core/elements/custom-list"></require>
     <paper-drawer-panel>
         <paper-header-panel drawer>
             <paper-toolbar>
                 <div>Application</div>
             </paper-toolbar>
-            <custom-list></custom-list>
+            <custom-list multi-selection.bind="multiSelection"></custom-list>
         </paper-header-panel>
         <paper-header-panel main>
             <paper-toolbar>

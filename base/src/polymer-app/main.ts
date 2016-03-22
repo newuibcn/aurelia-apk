@@ -5,7 +5,5 @@ import {autoinject} from "aurelia-dependency-injection";
 
 @autoinject
 export class Main{
-    attached(){
-        alert('main');
-    }
+    public multiSelection: boolean = true;
 }

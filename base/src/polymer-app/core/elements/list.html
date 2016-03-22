@@ -1,0 +1,39 @@
+<dom-module id="element-list">
+    <template>
+        <paper-menu on-iron-select="_itemSelected" multi="multiSelection">
+            <template is="dom-repeat" items="[[data]]" as="item">
+                <paper-item>[[item.name]]</paper-item>
+            </template>
+        </paper-menu>
+    </template>
+
+    <script>
+        Polymer({
+            _createItem: function() {
+                this.push('data', 'New Option ' + this.data.length);
+            },
+
+            _itemSelected: function() {
+                console.log('Selected!');
+            },
+
+            properties:{
+                data: {
+                    type: Array
+                }
+            },
+
+            ready: function() {
+                console.log(this.data);
+            },
+
+            observers: [
+                'dataChanged(data)'
+            ],
+
+            dataChanged: function(data){
+                console.log(data);
+            }
+        });
+    </script>
+</dom-module>

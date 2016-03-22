@@ -32,6 +32,7 @@ System.config({
     "aurelia-path": "npm:aurelia-path@1.0.0-beta.1.1.1",
     "aurelia-polyfills": "npm:aurelia-polyfills@1.0.0-beta.1.0.0",
     "aurelia-router": "npm:aurelia-router@1.0.0-beta.1.1.2",
+    "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.1.1.1",
     "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1.1.2",
     "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0-beta.1.1.2",
     "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.1.1.2",

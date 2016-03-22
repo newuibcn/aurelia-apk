@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b527165-ef15-4747-bdd9-9829c2e8c63c" name="Default" comment="polymer performance">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/polymer-app/custom-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/polymer-app/custom-list.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/polymer-app/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/polymer-app/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/polymer-app/main.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/test-data/contacts.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/polymer-app/blur-image.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/polymer-app/child-router.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/polymer-app/child-router.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/polymer-app/users.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/polymer-app/users.ts" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/base/src/polymer-app/welcome.html" afterPath="$PROJECT_DIR$/base/src/polymer-app/login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/base/src/polymer-app/welcome.ts" afterPath="$PROJECT_DIR$/base/src/polymer-app/login.ts" />
+    <list default="true" id="0b527165-ef15-4747-bdd9-9829c2e8c63c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/polymer-app/core/elements/custom-list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/polymer-app/core/elements/custom-list.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/src/polymer-app/core/elements/list.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/polymer-app/custom-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/polymer-app/custom-list.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/base/src/polymer-app/list.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/config.js" afterPath="$PROJECT_DIR$/base/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/index.html" afterPath="$PROJECT_DIR$/base/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/app.html" afterPath="$PROJECT_DIR$/base/src/app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/polymer-app/app.html" afterPath="$PROJECT_DIR$/base/src/polymer-app/app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/polymer-app/app.ts" afterPath="$PROJECT_DIR$/base/src/polymer-app/app.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/polymer-app/main.html" afterPath="$PROJECT_DIR$/base/src/polymer-app/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/src/polymer-app/main.ts" afterPath="$PROJECT_DIR$/base/src/polymer-app/main.ts" />
     </list>
     <ignored path="aurelia-apk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,68 +31,15 @@
     <favorites_list name="aurelia-apk" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/src/polymer-app/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/src/polymer-app/main.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom-list.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/src/polymer-app/custom-list.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-              <folding>
-                <element signature="n#!!doc;n#CustomList#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/base/src/polymer-app/list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5261324">
-              <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="polymer-micro.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/bower_components/polymer/polymer-micro.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.909091">
-              <caret line="420" column="23" selection-start-line="420" selection-start-column="23" selection-end-line="420" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -111,9 +49,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/base/server/gulpfile.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/base/export/new-file.html" />
         <option value="$PROJECT_DIR$/base/build/tasks/git.js" />
         <option value="$PROJECT_DIR$/base/export/server/index.js" />
         <option value="$PROJECT_DIR$/base/server/index.js" />
@@ -155,13 +90,16 @@
         <option value="$PROJECT_DIR$/base/src/polymer-app/login.html" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/login.ts" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/contacts.json" />
-        <option value="$PROJECT_DIR$/base/config.js" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/list.ts" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/custom-list.html" />
-        <option value="$PROJECT_DIR$/base/src/polymer-app/main.ts" />
-        <option value="$PROJECT_DIR$/base/src/polymer-app/main.html" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/custom-list.ts" />
+        <option value="$PROJECT_DIR$/base/config.js" />
         <option value="$PROJECT_DIR$/base/src/polymer-app/list.html" />
+        <option value="$PROJECT_DIR$/base/src/polymer-app/core/elements/custom-list.ts" />
+        <option value="$PROJECT_DIR$/base/src/polymer-app/main.html" />
+        <option value="$PROJECT_DIR$/base/src/polymer-app/core/elements/list.html" />
+        <option value="$PROJECT_DIR$/base/src/polymer-app/core/elements/custom-list.html" />
+        <option value="$PROJECT_DIR$/base/src/polymer-app/main.ts" />
       </list>
     </option>
   </component>
@@ -515,11 +453,11 @@
       <recent name="$PROJECT_DIR$/base/fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex\Documents\newuibcn\testing\aurelia-apk\base\src\polymer-app\core\elements" />
       <recent name="$PROJECT_DIR$/base/third-party" />
       <recent name="$PROJECT_DIR$/base/dist/test" />
       <recent name="$PROJECT_DIR$/base/src" />
       <recent name="$PROJECT_DIR$/base/src/core/cordova" />
-      <recent name="$PROJECT_DIR$/base/src/bootstrap" />
     </key>
   </component>
   <component name="RunManager">
@@ -685,15 +623,21 @@
       <option name="project" value="LOCAL" />
       <updated>1458550215922</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="polymer element">
+      <created>1458579194321</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1458579194321</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1808604" sideWeight="0.5273523" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14488935" sideWeight="0.4726477" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14488935" sideWeight="0.4726477" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32575756" sideWeight="0.408658" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -742,7 +686,8 @@
     <MESSAGE value="load app from local copy when no update is possible" />
     <MESSAGE value="new checking updates screen for autoupdater" />
     <MESSAGE value="roboto fonts" />
-    <option name="LAST_COMMIT_MESSAGE" value="roboto fonts" />
+    <MESSAGE value="polymer element" />
+    <option name="LAST_COMMIT_MESSAGE" value="polymer element" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -874,6 +819,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7580645">
           <caret line="441" column="5" selection-start-line="441" selection-start-column="5" selection-end-line="441" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -921,14 +867,6 @@
           <folding>
             <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68717045">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,14 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.160714">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base/src/polymer-app/app.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31166667">
@@ -1078,52 +1008,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/polymer-app/main.html">
+    <entry file="file://$PROJECT_DIR$/base/bower_components/polymer/polymer-micro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        <state vertical-scroll-proportion="-2.6727273">
+          <caret line="416" column="16" selection-start-line="416" selection-start-column="16" selection-end-line="416" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8118467">
+          <caret line="42" column="13" selection-start-line="38" selection-start-column="4" selection-end-line="42" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/typescriptCompiler/external/lib.es6.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5316667">
+          <caret line="5458" column="31" selection-start-line="5458" selection-start-column="31" selection-end-line="5458" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/jspm_packages/npm/aurelia-task-queue@1.0.0-beta.1.1.1/aurelia-task-queue.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2771084">
+          <caret line="34" column="68" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/src/polymer-app/core/elements/custom-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="71" selection-start-line="2" selection-start-column="71" selection-end-line="2" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/base/src/polymer-app/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.14166667">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/polymer-app/custom-list.html">
+    <entry file="file://$PROJECT_DIR$/base/src/polymer-app/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08885018">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.20731707">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/polymer-app/custom-list.ts">
+    <entry file="file://$PROJECT_DIR$/base/src/polymer-app/core/elements/custom-list.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc;n#CustomList#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/bower_components/polymer/polymer-micro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.909091">
-          <caret line="420" column="23" selection-start-line="420" selection-start-column="23" selection-end-line="420" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.11333334">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/polymer-app/list.html">
+    <entry file="file://$PROJECT_DIR$/base/src/polymer-app/core/elements/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5261324">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.38501742">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
           <folding />
         </state>
       </provider>
