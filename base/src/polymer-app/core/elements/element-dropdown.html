@@ -1,0 +1,30 @@
+<dom-module id="element-dropdown">
+    <template>
+        <paper-material elevation="1">
+            <paper-dropdown-menu>
+                <paper-menu class="dropdown-content" on-iron-select="_itemSelected">
+                    <template is="dom-repeat" items="[[_menuItems]]">
+                        <paper-item>[[item]]</paper-item>
+                    </template>
+                </paper-menu>
+            </paper-dropdown-menu>
+            <paper-button on-click="_createItem">Add</paper-button>
+        </paper-material>
+    </template>
+
+    <script>
+        Polymer({
+            _createItem: function() {
+                this.push('_menuItems', 'New Option ' + this._menuItems.length);
+            },
+
+            _itemSelected: function() {
+                console.log('Selected!');
+            },
+
+            ready: function() {
+                this._menuItems = ['First Initial Option', 'Second Initial Option'];
+            }
+        });
+    </script>
+</dom-module>

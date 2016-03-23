@@ -1,5 +1,6 @@
 <template>
     <require from="./core/elements/custom-list"></require>
+    <require from="./core/elements/custom-dropdown"></require>
     <paper-drawer-panel>
         <paper-header-panel drawer>
             <paper-toolbar>
@@ -13,6 +14,7 @@
                 <div>Title</div>
             </paper-toolbar>
             <h1>TEST</h1>
+            <custom-dropdown></custom-dropdown>
             <router-view></router-view>
         </paper-header-panel>
     </paper-drawer-panel>
